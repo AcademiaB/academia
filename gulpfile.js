@@ -48,7 +48,7 @@ gulp.task("pug", () => {
     var option = {
         pretty: true
     }
-    gulp.src("./pug/**/*.pug")
+    gulp.src("./pug/*.pug")
         .pipe(plumber({
             errorHandler: notify.onError("Error: <%= error.message %>")
         }))
