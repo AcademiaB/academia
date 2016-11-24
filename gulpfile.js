@@ -9,7 +9,7 @@ gulp.task('default', ['sass', 'browser-sync', 'pug', 'watch']);
 
 //sassとpugの監視をして変換処理させる
 gulp.task('watch', () => {
-    gulp.watch(['./scss/**'], () => {
+    gulp.watch(['./sass/**'], () => {
         gulp.start(['sass']);
     });
     gulp.watch(['./pug/**'], () => {
@@ -33,12 +33,12 @@ gulp.task('browser-sync', () => {
 
 //sassをcssに変換
 gulp.task("sass", () => {
-    gulp.src("./scss/**/*scss")
+    gulp.src("./sass/**/*.scss")
         .pipe(plumber({
             errorHandler: notify.onError("Error: <%= error.message %>")
         }))
         .pipe(sass())
-        .pipe(gulp.dest("./css"))
+        .pipe(gulp.dest("./css/"))
         //reloadせずにinjectする
         .pipe(browserSync.stream())
 });

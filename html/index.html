@@ -13,11 +13,32 @@
     <title>産学連携サンプル</title>
   </head>
   <body>
-    <div id="fullpage_wrapper">
-      <section class="section"></section>
-      <section class="section"></section>
-      <section class="section"></section>
-      <section class="section"></section>
+    <header class="header">
+      <nav class="header__nav">
+        <ul class="heading_menu" id="menu">
+          <li class="item" data-menuanchor="firstPage"><a class="item__link" href="#firstPage">FirstSection</a></li>
+          <li class="item" data-menuanchor="secondPage"><a class="item__link" href="#secondPage">SecondSection</a></li>
+          <li class="item" data-menuanchor="3rdPage"><a class="item__link" href="#3rdPage">ThirdSection</a></li>
+          <li class="item" data-menuanchor="4thPage"><a class="item__link" href="#4thPage">FourthSection</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="fullpage" id="fullpage">
+      <div class="section">
+        <p>フルページその1</p>
+      </div>
+      <div class="section">
+        <div class="slide">スライド1</div>
+        <div class="slide">スライド2</div>
+        <div class="slide">スライド3</div>
+        <div class="slide">スライド4</div>
+      </div>
+      <div class="section">
+        <p>フルページその2</p>
+      </div>
+      <div class="section">
+        <p>フルページその3</p>
+      </div>
     </div>
   </body>
 </html>
