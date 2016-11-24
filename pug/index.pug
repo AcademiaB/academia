@@ -1,0 +1,30 @@
+doctype html
+html(lang="ja")
+  head
+    meta(charset="utf-8")
+      
+    link(href="../css/reset.css" rel="stylesheet")
+    link(href="../css/jquery.fullPage.css" rel="stylesheet")
+    link(href="../css/style.css" rel="stylesheet")
+      
+    script(src="../js/vendors/jquery-1.11.2.min.js")
+    script(src="../js/vendors/jquery.easings.min.js")
+    script(src="../js/vendors/scrolloverflow.min.js")
+    script(src="../js/vendors/jquery.fullPage.min.js")
+    script(src="../js/main.js")
+      
+    title 産学連携サンプル
+  body
+    include include/_header.pug
+    #fullpage.fullpage
+      .section
+        p フルページその1
+      .section
+        .slide スライド1
+        .slide スライド2
+        .slide スライド3
+        .slide スライド4
+      .section
+        p フルページその2
+      .section
+        p フルページその3
