@@ -8,7 +8,14 @@
 
 
 
+html,body {
+    height: 100%;
+}
+
+//  header
+//  .pugはinclude/_header.pug
 .header {
+    display: none;  //オープニング後に書き換え
     position: absolute;
     z-index: 999;
     width: 100%;
@@ -54,5 +61,25 @@
 
 
 .fullpage {
+    display: none;
     position: relative;
+}
+
+
+
+.layer1 {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #333;
+
+    .paper {
+        height: 100%;
+        text-align: center;
+
+        img {
+            width: auto;
+            height: 100%;
+        }
+    }
 }
