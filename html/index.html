@@ -13,32 +13,44 @@
     <title>産学連携サンプル</title>
   </head>
   <body>
-    <header class="header">
+    <header class="header" id="header">
       <nav class="header__nav">
         <ul class="heading_menu" id="menu">
-          <li class="item" data-menuanchor="firstPage"><a class="item__link" href="#firstPage">FirstSection</a></li>
-          <li class="item" data-menuanchor="secondPage"><a class="item__link" href="#secondPage">SecondSection</a></li>
-          <li class="item" data-menuanchor="3rdPage"><a class="item__link" href="#3rdPage">ThirdSection</a></li>
-          <li class="item" data-menuanchor="4thPage"><a class="item__link" href="#4thPage">FourthSection</a></li>
+          <li class="item" data-menuanchor="aaa"><a class="item__link" href="#aaa">aaa</a></li>
+          <li class="item" data-menuanchor="page_1"><a class="item__link" href="#page_1">page_1</a></li>
+          <li class="item" data-menuanchor="page_2"><a class="item__link" href="#page_2">page_2</a></li>
+          <li class="item" data-menuanchor="page_3"><a class="item__link" href="#page_3">page_3</a></li>
+          <li class="item" data-menuanchor="page_4"><a class="item__link" href="#page_4">page_4</a></li>
         </ul>
       </nav>
     </header>
     <div class="fullpage" id="fullpage" style="display: none">
-      <div class="section">
+      <section class="section top_menu">
+        <div class="logo">
+          <p class="logo__item"></p>
+        </div>
+        <ul class="list clearfix">
+          <li class="list__item"><a class="list__item__link" href="#page_1"><img class="list__item__link__image" src="../img/huzitaya.png" alt="藤田屋1"></a></li>
+          <li class="list__item"><a class="list__item__link" href="#page_2"><img class="list__item__link__image" src="../img/huzitaya.png" alt="藤田屋2"></a></li>
+          <li class="list__item"><a class="list__item__link" href="#page_3"><img class="list__item__link__image" src="../img/huzitaya.png" alt="藤田屋3"></a></li>
+          <li class="list__item"><a class="list__item__link" href="#page_4"><img class="list__item__link__image" src="../img/huzitaya.png" alt="藤田屋4"></a></li>
+        </ul>
+      </section>
+      <section class="section">
         <p>フルページその1</p>
-      </div>
-      <div class="section">
+      </section>
+      <section class="section">
         <div class="slide">スライド1</div>
         <div class="slide">スライド2</div>
         <div class="slide">スライド3</div>
         <div class="slide">スライド4</div>
-      </div>
-      <div class="section">
+      </section>
+      <section class="section">
         <p>フルページその2</p>
-      </div>
-      <div class="section">
+      </section>
+      <section class="section">
         <p>フルページその3</p>
-      </div>
+      </section>
     </div>
   </body>
 </html>

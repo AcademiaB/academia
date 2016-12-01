@@ -1,5 +1,5 @@
 $(function(){
-
+  fullpage_load();
 });
 
 
@@ -9,8 +9,10 @@ function fullpage_load(){
 
   //  fullpage.jsの読み込み部分
   $('#fullpage').fullpage({
-    anchors: ['firstPage', 'secondPage', '3rdPage', '4thpage'],
+    anchors: ['aiueo','page_1', 'page_2', 'page_3', 'page_4'],
     menu: '#menu',
-    sectionsColor: ['#addbff', '#ff8e88', '#ffc489', '#84ff84']
+    sectionsColor: ['#FFF','#addbff', '#ff8e88', '#ffc489', '#84ff84']
   });
+
+  //$('#header').fadeIn("slow");
 }

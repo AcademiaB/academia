@@ -19,6 +19,8 @@ html, body {
         height: 50px;
         line-height: 50px; }
         .header__nav .heading_menu .item:first-child {
+          display: none; }
+        .header__nav .heading_menu .item:nth-child(2) {
           margin: 0 20px 0 20px; }
         .header__nav .heading_menu .item__link {
           display: block;
@@ -33,6 +35,39 @@ html, body {
           .header__nav .heading_menu .item__link:hover {
             background-color: #ff386c;
             color: #F5F5F5; }
+
+.top_menu {
+  height: 100%; }
+  .top_menu .fp-tableCell {
+    display: block; }
+  .top_menu .logo {
+    padding: 100px 0;
+    box-sizing: border-box; }
+    .top_menu .logo__item {
+      width: 900px;
+      height: 400px;
+      margin: 0 auto;
+      background-color: #ee9144; }
+  .top_menu .list {
+    width: 1450px;
+    margin: 0 auto;
+    padding: 0 50px;
+    box-sizing: border-box; }
+    .top_menu .list__item {
+      width: 300px;
+      height: auto;
+      margin: 0 25px;
+      float: left; }
+      .top_menu .list__item:first-child {
+        margin: 0 25px 0 0; }
+      .top_menu .list__item:last-child {
+        margin: 0 0 0 25px; }
+      .top_menu .list__item__link {
+        display: block;
+        text-align: center; }
+        .top_menu .list__item__link__image {
+          width: 300px;
+          height: auto; }
 
 .fullpage {
   display: none;
