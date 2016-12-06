@@ -1,0 +1,19 @@
+//  name   : js-utility.scss
+//  writer : DaichiSeki
+//  date   : 2016/12/6〜
+//  汎用的なクラスはここへ
+//  基本的にjsで付与する以外には使わないこと
+@charset "UTF-8";
+
+//  汎用クラス
+.js_v_hidden {
+    visibility: hidden;
+}
+
+.js_d_none {
+    display: none;
+}
+
+.js_border_none {
+    border: 0;
+}

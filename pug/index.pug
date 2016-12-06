@@ -17,7 +17,7 @@ html(lang="ja")
   body
     include include/_header.pug
     #fullpage.fullpage(style="display: none;")
-      section.section.top_menu
+      section.section.top_menu#section1
         .logo
           p.logo__item
         ul.list.clearfix
@@ -33,15 +33,32 @@ html(lang="ja")
           li.list__item
             a.list__item__link(href="#page_4")
               img.list__item__link__image(src="../img/huzitaya.png" alt="藤田屋4")
-      section.section
+      section.section#section2
         p フルページその1
-      section.section
-        .slide スライド1
-        .slide スライド2
-        .slide スライド3
-        .slide スライド4
-      section.section
+      section.section#section3
+        .slide#slide3_1
+          img(src="../img/jk01.png" alt="おこ")
+        .slide#slide3_2
+          //  ←ここに.fp-tableCellが入る
+          img(src="../img/jk01.png" alt="おこ")
+          img(src="../img/jk01.png" alt="おこ")
+        .slide#slide3_3 スライド3
+          img(src="../img/jk01.png" alt="おこ")
+          img(src="../img/jk01.png" alt="おこ")
+          img(src="../img/jk01.png" alt="おこ")
+        .slide#slide3_4 スライド4
+          img(src="../img/jk01.png" alt="おこ")
+          img(src="../img/jk01.png" alt="おこ")
+          img(src="../img/jk01.png" alt="おこ")
+          img(src="../img/jk01.png" alt="おこ")
+        .slide#slide3_5 スライド5
+          img(src="../img/jk01.png" alt="おこ")
+          img(src="../img/jk01.png" alt="おこ")
+          img(src="../img/jk01.png" alt="おこ")
+          img(src="../img/jk01.png" alt="おこ")
+          img(src="../img/jk01.png" alt="おこ")
+      section.section#section4
         p フルページその2
-      section.section
+      section.section#section5
         p フルページその3
       

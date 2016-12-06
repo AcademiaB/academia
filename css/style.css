@@ -1,3 +1,12 @@
+.js_v_hidden {
+  visibility: hidden; }
+
+.js_d_none {
+  display: none; }
+
+.js_border_none {
+  border: 0; }
+
 html, body {
   height: 100%; }
 
