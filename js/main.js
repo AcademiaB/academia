@@ -17,13 +17,40 @@ function fullpage_load(){
     onLeave: function(index, nextIndex, direction){
       var leavingSection = $(this);
 
-      //after leaving section 2
+      //  メニューから1店舗目へのリンクを押した時
+      if(index == 1 && nextIndex == 2 && direction =='down'){
+        alert("メニューから2店舗目へ");
+        $("#section2 .fp-tableCell").addClass("js_d_none");
+        $("#slide2_1 .fp-tableCell").fadeIn(3000);
+        $("#slide2_1 .fp-tableCell").removeClass("js_d_none");
+      }
+
+      //  メニューから2店舗目へのリンクを押した時
       if(index == 1 && nextIndex == 3 && direction =='down'){
         alert("メニューから2店舗目へ");
         $("#section3 .fp-tableCell").addClass("js_d_none");
         $("#slide3_1 .fp-tableCell").fadeIn(3000);
         $("#slide3_1 .fp-tableCell").removeClass("js_d_none");
       }
+
+      //  メニューから3店舗目へのリンクを押した時
+      if(index == 1 && nextIndex == 4 && direction =='down'){
+        alert("メニューから3店舗目へ");
+        $("#section4 .fp-tableCell").addClass("js_d_none");
+        $("#slide4_1 .fp-tableCell").fadeIn(3000);
+        $("#slide4_1 .fp-tableCell").removeClass("js_d_none");
+      }
+
+      //  メニューから4店舗目へのリンクを押した時
+      if(index == 1 && nextIndex == 5 && direction =='down'){
+        alert("メニューから4店舗目へ");
+        $("#section5 .fp-tableCell").addClass("js_d_none");
+        $("#slide5_1 .fp-tableCell").fadeIn(3000);
+        $("#slide5_1 .fp-tableCell").removeClass("js_d_none");
+      }
+
+
+
     },
 
     //  スライド移動を押した際
