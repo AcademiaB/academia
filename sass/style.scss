@@ -147,12 +147,11 @@ html,body {
                 .quiz {
                     position: absolute;
                     right: 0;
-                    bottom: 100px;
+                    bottom: 200px;
                     left: 0;
                     width: 900px;
                     height: 600px;
                     margin: auto;
-                    background-color: #EEE;
 
                     //  .quiz__word
                     //  クイズの問題文部分の外枠
@@ -160,7 +159,6 @@ html,body {
                         position: relative;
                         width: 900px;
                         height: 300px;
-                        background-color: #DDD;
 
                         .question {
                             position: relative;
@@ -213,7 +211,34 @@ html,body {
                     &__choice {
                         width: 900px;
                         height: 300px;
-                        background-color: #CCC;
+
+                        &__A {
+                            width: 300px;
+                            margin: 0 0 0 50px;
+                        }
+
+                        &__B {
+                            width: 300px;
+                            margin: 0 50px 0 0;
+                        }
+
+                        &__A,&__B {
+                            text-align: center;
+                            float: left;
+
+                            .link {
+                                display: block;
+                                .image {
+                                    width: auto;
+                                    height: 300px;
+                                }
+                            }
+                        }
+
+                        &__soogo {
+                            width: 200px;
+                            float: left;
+                        }
                     }
                 }//  .quiz
             }//  .back_layer
