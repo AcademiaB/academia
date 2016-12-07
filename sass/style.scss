@@ -68,6 +68,8 @@ html,body {
 
 .top_menu {
     height: 100%;
+    background-image: url("../img/menu_back_pattern.png");
+    background-size: auto;
 
     //  fullpage.jsのCSS打ち消し
     .fp-tableCell {
@@ -85,7 +87,14 @@ html,body {
             width: 900px;
             height: 400px;
             margin: 0 auto;
-            background-color: #ee9144;
+            text-align: center;
+
+            &__link {
+                .menu_logo_image {
+                    width: auto;
+                    height: 400px;
+                }
+            }
         }
     }
 
@@ -125,7 +134,92 @@ html,body {
 .fullpage {
     display: none;
     position: relative;
-}
+
+    #section3 {
+        .slide3_1 {
+            .back_layer {
+                position: relative;
+                height: 100%;
+                background-color: #FFF;
+                background-image: url("../img/menu_back_pattern.png");
+                background-size: auto;
+
+                .quiz {
+                    position: absolute;
+                    right: 0;
+                    bottom: 100px;
+                    left: 0;
+                    width: 900px;
+                    height: 600px;
+                    margin: auto;
+                    background-color: #EEE;
+
+                    //  .quiz__word
+                    //  クイズの問題文部分の外枠
+                    &__word {
+                        position: relative;
+                        width: 900px;
+                        height: 300px;
+                        background-color: #DDD;
+
+                        .question {
+                            position: relative;
+                            width: 750px;
+                            height: 200px;
+                            margin: 25px auto 0 auto;
+                            border: 10px solid $key_color2;
+                            box-sizing: border-box;
+                            background-color: #FFF;
+
+                            &__word {
+                                position: absolute;
+                                right: 0;
+                                left: 0;
+                                width: 650px;
+                                margin: 22px auto;
+                                line-height: 2;
+                                color: $key_color2;
+                                font-weight: bold;
+                                @include font-size(34);
+
+                                span {
+                                    display: block;
+                                }
+                            }//  .question__word
+
+                            &__circle {
+                                position: absolute;
+                                top: -30px;
+                                left: -30px;
+                                width: 80px;
+                                height: 80px;
+                                @include border-radius(40);
+                                background-color: $key_color2;
+
+                                &__number {
+                                    height: 80px;
+                                    line-height: 80px;
+                                    text-align: center;
+                                    color: #FFF;
+                                    font-weight: bold;
+                                    @include font-size(30);
+                                }
+                            }
+                        }//  .question
+                    }//  .quiz__word
+
+                    //  .quiz__choice
+                    //  クイズの選択肢部分の外枠
+                    &__choice {
+                        width: 900px;
+                        height: 300px;
+                        background-color: #CCC;
+                    }
+                }//  .quiz
+            }//  .back_layer
+        }//  .slide3_1
+    }//  #section3
+}//  .fullpage
 
 
 

@@ -46,7 +46,9 @@ html, body {
             color: #F5F5F5; }
 
 .top_menu {
-  height: 100%; }
+  height: 100%;
+  background-image: url("../img/menu_back_pattern.png");
+  background-size: auto; }
   .top_menu .fp-tableCell {
     display: block; }
   .top_menu .logo {
@@ -56,7 +58,10 @@ html, body {
       width: 900px;
       height: 400px;
       margin: 0 auto;
-      background-color: #ee9144; }
+      text-align: center; }
+      .top_menu .logo__item__link .menu_logo_image {
+        width: auto;
+        height: 400px; }
   .top_menu .list {
     width: 1450px;
     margin: 0 auto;
@@ -81,6 +86,67 @@ html, body {
 .fullpage {
   display: none;
   position: relative; }
+  .fullpage #section3 .slide3_1 .back_layer {
+    position: relative;
+    height: 100%;
+    background-color: #FFF;
+    background-image: url("../img/menu_back_pattern.png");
+    background-size: auto; }
+    .fullpage #section3 .slide3_1 .back_layer .quiz {
+      position: absolute;
+      right: 0;
+      bottom: 100px;
+      left: 0;
+      width: 900px;
+      height: 600px;
+      margin: auto;
+      background-color: #EEE; }
+      .fullpage #section3 .slide3_1 .back_layer .quiz__word {
+        position: relative;
+        width: 900px;
+        height: 300px;
+        background-color: #DDD; }
+        .fullpage #section3 .slide3_1 .back_layer .quiz__word .question {
+          position: relative;
+          width: 750px;
+          height: 200px;
+          margin: 25px auto 0 auto;
+          border: 10px solid #ff8e88;
+          box-sizing: border-box;
+          background-color: #FFF; }
+          .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__word {
+            position: absolute;
+            right: 0;
+            left: 0;
+            width: 650px;
+            margin: 22px auto;
+            line-height: 2;
+            color: #ff8e88;
+            font-weight: bold;
+            font-size: 34px;
+            font-size: 2.125rem; }
+            .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__word span {
+              display: block; }
+          .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__circle {
+            position: absolute;
+            top: -30px;
+            left: -30px;
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            background-color: #ff8e88; }
+            .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__circle__number {
+              height: 80px;
+              line-height: 80px;
+              text-align: center;
+              color: #FFF;
+              font-weight: bold;
+              font-size: 30px;
+              font-size: 1.875rem; }
+      .fullpage #section3 .slide3_1 .back_layer .quiz__choice {
+        width: 900px;
+        height: 300px;
+        background-color: #CCC; }
 
 .fp-controlArrow.fp-prev {
   visibility: hidden; }

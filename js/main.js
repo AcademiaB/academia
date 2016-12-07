@@ -11,7 +11,7 @@ function fullpage_load(){
   $('#fullpage').fullpage({
     anchors: ['aiueo','page_1', 'page_2', 'page_3', 'page_4'],
     menu: '#menu',
-    sectionsColor: ['#FFF','#addbff', '#ff8e88', '#ffc489', '#84ff84'],
+    sectionsColor: ['#FFF','#addbff', '#FFF', '#ffc489', '#84ff84'],
 
     //  現在表示しているコンテンツからスクロールし、移動した際
     onLeave: function(index, nextIndex, direction){

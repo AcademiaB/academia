@@ -20,6 +20,8 @@ html(lang="ja")
       section.section.top_menu#section1
         .logo
           p.logo__item
+            a.logo__item__link(href="#section1")
+              img.menu_logo_image(src="../img/menu_logo.png" alt="メニューロゴ")
         ul.list.clearfix
           li.list__item
             a.list__item__link(href="#page_1")
@@ -39,8 +41,17 @@ html(lang="ja")
         .slide#slide2_3 1店舗目スライド3
         .slide#slide2_4 1店舗目スライド4
       section.section#section3
-        .slide#slide3_1
-          img(src="../img/jk01.png" alt="おこ")
+        .slide.slide3_1#slide3_1
+          .back_layer
+            .quiz
+              .quiz__word
+                .question
+                  p.question__word
+                    span 名古屋市中央卸売市場では
+                    span 一般の人がセリに参加することができる！
+                  .question__circle
+                    p.question__circle__number Q1
+              .quiz__choice
         .slide#slide3_2
           //  ←ここに.fp-tableCellが入る
           img(src="../img/jk01.png" alt="おこ")
