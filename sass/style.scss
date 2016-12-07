@@ -130,3 +130,7 @@ html,body {
 
 
 //  fullpage.cssの改変部分
+//  スライド内左右の矢印を非表示に
+.fp-controlArrow.fp-prev {
+    visibility: hidden;
+}

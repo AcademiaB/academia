@@ -81,3 +81,6 @@ html, body {
 .fullpage {
   display: none;
   position: relative; }
+
+.fp-controlArrow.fp-prev {
+  visibility: hidden; }
