@@ -13,11 +13,6 @@ function fullpage_load(){
     menu: '#menu',
     sectionsColor: ['#FFF','#addbff', '#ff8e88', '#ffc489', '#84ff84'],
 
-    afterResize: function(){
-      var pluginContainer = $(this);
-      alert("メニュー読み込みました！！！");
-    },
-
     //  現在表示しているコンテンツからスクロールし、移動した際
     onLeave: function(index, nextIndex, direction){
       var leavingSection = $(this);
