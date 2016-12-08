@@ -1,5 +1,15 @@
 $(function(){
   fullpage_load();
+
+  /*
+    マルバツを押した際の動作
+  */
+  $(".quiz__choice__A #link").click(function (){
+    alert("まるを選択！");
+  });
+  $(".quiz__choice__B #link").click(function (){
+    alert("ばつを選択！");
+  });
 });
 
 
