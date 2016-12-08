@@ -6,9 +6,11 @@ $(function(){
   */
   $(".quiz__choice__A #link").click(function (){
     alert("まるを選択！");
+    $.fn.fullpage.moveTo('page_2', 1);
   });
   $(".quiz__choice__B #link").click(function (){
     alert("ばつを選択！");
+    $.fn.fullpage.moveTo('page_2', 1);
   });
 });
 
