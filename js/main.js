@@ -4,6 +4,7 @@ $(function(){
 
 
 
+
   /**********
     マルバツを押した際の動作
   **********/
@@ -18,7 +19,11 @@ $(function(){
   });
   $(".quiz__choice__B #link_B").click(function (){
     alert("ばつを選択！");
-    $.fn.fullpage.silentMoveTo('page_2', 1);
+    $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo);
+
+    function mySilentMoveTo(){
+      $.fn.fullpage.silentMoveTo('page_2', 1);
+    }
   });
 });
 
