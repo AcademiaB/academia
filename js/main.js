@@ -6,11 +6,25 @@ $(function(){
   **********/
   //  魚勝商店
   $("#menu_page2_link").click(function(){
-    $("#section1 .fp-tableCell").fadeOut(2000,mySlilentMoveTo_menuLink("page_2"));
-  });
 
-  function mySlilentMoveTo_menuLink(page){
-    $.fn.fullpage.silentMoveTo(page, 0);
+    //  この部分の書き方は「jQueryメソッドチェーン」で検索すると出てきます
+    $('#menu_soogo')
+      .animate({
+        'marginLeft': '650px',
+        'complete': setTimeout(function(){
+          mySlilentMoveTo_menuLink();
+        },4200)
+      },2000,'easeInOutQuart')
+      .animate({
+        'marginBottom': '40px'
+      },1000)
+      .animate({
+        'opacity': 0,
+      },1000);
+    });
+
+  function mySlilentMoveTo_menuLink(){
+    $.fn.fullpage.silentMoveTo("page_2", 0);
   }
 
 
@@ -20,11 +34,9 @@ $(function(){
   **********/
   //  魚勝商店
   $(".quiz__choice__A #link_A").click(function (){
-    alert("まるを選択！");
     $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
   });
   $(".quiz__choice__B #link_B").click(function (){
-    alert("ばつを選択！");
     $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
   });
 

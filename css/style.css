@@ -46,6 +46,7 @@ html, body {
             color: #F5F5F5; }
 
 .top_menu {
+  position: relative;
   height: 100%;
   background-image: url("../img/menu_back_ryuguu.png");
   background-size: contain;
@@ -84,6 +85,13 @@ html, body {
         .top_menu .list__item__link__image {
           width: 300px;
           height: auto; }
+  .top_menu .soogo {
+    position: absolute;
+    bottom: 80px;
+    left: 50px; }
+    .top_menu .soogo__image {
+      width: auto;
+      height: 200px; }
 
 .fullpage {
   display: none;
