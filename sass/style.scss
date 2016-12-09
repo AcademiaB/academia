@@ -68,8 +68,10 @@ html,body {
 
 .top_menu {
     height: 100%;
-    background-image: url("../img/menu_back_pattern.png");
-    background-size: auto;
+    background-image: url("../img/menu_back_ryuguu.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
 
     //  fullpage.jsのCSS打ち消し
     .fp-tableCell {
@@ -243,6 +245,44 @@ html,body {
                 }//  .quiz
             }//  .back_layer
         }//  .slide3_1
+
+
+
+        .slide3_2 {
+            .back_layer {
+                position: relative;
+                height: 100%;
+                background-color: #FFF;
+                background-image: url("../img/menu_back_pattern.png");
+                background-size: auto;
+
+                //  gif画像用
+                .movie {
+                    height: 100%;
+
+                    &__gif {
+                        position: relative;
+                        height: 100%;
+                        text-align: center;
+
+                        .image {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: auto;
+                            height: 80%;
+                            margin: auto;
+                        }
+                    }
+                }//  .movie
+
+                .answer {
+
+                }//  .answer
+            }//  .back_layer
+        }//  .slide3_2
     }//  #section3
 }//  .fullpage
 

@@ -47,8 +47,10 @@ html, body {
 
 .top_menu {
   height: 100%;
-  background-image: url("../img/menu_back_pattern.png");
-  background-size: auto; }
+  background-image: url("../img/menu_back_ryuguu.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center; }
   .top_menu .fp-tableCell {
     display: block; }
   .top_menu .logo {
@@ -161,6 +163,27 @@ html, body {
         .fullpage #section3 .slide3_1 .back_layer .quiz__choice__soogo {
           width: 200px;
           float: left; }
+  .fullpage #section3 .slide3_2 .back_layer {
+    position: relative;
+    height: 100%;
+    background-color: #FFF;
+    background-image: url("../img/menu_back_pattern.png");
+    background-size: auto; }
+    .fullpage #section3 .slide3_2 .back_layer .movie {
+      height: 100%; }
+      .fullpage #section3 .slide3_2 .back_layer .movie__gif {
+        position: relative;
+        height: 100%;
+        text-align: center; }
+        .fullpage #section3 .slide3_2 .back_layer .movie__gif .image {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: auto;
+          height: 80%;
+          margin: auto; }
 
 .fp-controlArrow.fp-prev {
   visibility: hidden; }

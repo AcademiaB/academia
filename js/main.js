@@ -4,11 +4,12 @@ $(function(){
   /*
     マルバツを押した際の動作
   */
-  $(".quiz__choice__A #link").click(function (){
+  //  魚勝商店
+  $(".quiz__choice__A #link_A").click(function (){
     alert("まるを選択！");
     $.fn.fullpage.moveTo('page_2', 1);
   });
-  $(".quiz__choice__B #link").click(function (){
+  $(".quiz__choice__B #link_B").click(function (){
     alert("ばつを選択！");
     $.fn.fullpage.moveTo('page_2', 1);
   });
@@ -23,7 +24,7 @@ function fullpage_load(){
   $('#fullpage').fullpage({
     anchors: ['aiueo','page_1', 'page_2', 'page_3', 'page_4'],
     menu: '#menu',
-    sectionsColor: ['#FFF','#addbff', '#FFF', '#ffc489', '#84ff84'],
+    sectionsColor: ['#46b9d2','#addbff', '#FFF', '#ffc489', '#84ff84'],
 
     //  現在表示しているコンテンツからスクロールし、移動した際
     onLeave: function(index, nextIndex, direction){
@@ -74,9 +75,20 @@ function fullpage_load(){
       if(index == 3 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
         alert("右に移動して2枚目のスライドへ！！！");
         $("#slide3_1 .fp-tableCell").addClass("js_d_none");
-        $("#slide3_2 .fp-tableCell").fadeIn(3000);
+        $("#slide3_2 .fp-tableCell").fadeIn(3000,gifLoad);
         $("#slide3_1 .fp-tableCell").fadeOut(100);
         $("#slide3_2 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide3_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          $("#slide3_2__movie__gif .image").ready(function() {
+            setTimeout(function(){
+              $("#slide3_2__movie__gif").fadeOut(1000);
+            },1500);
+          });
+        }
       }
 
       //  3つめのセクション かつ 2枚目のスライド かつ 次のスライドが3枚目 かつ 右にスライドした場合
