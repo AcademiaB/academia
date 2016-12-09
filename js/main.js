@@ -1,6 +1,17 @@
 $(function(){
   fullpage_load();
 
+  setTimeout(function(){
+    $('#menu_soogo')
+      .velocity({
+        'left': 50
+      },2000);
+    $('#menu_logo')
+      .velocity({
+        opacity: 1
+      },2000);
+  },1000);
+
   /**********
     メニューの店舗をクリックした際の動作
   **********/
@@ -9,21 +20,31 @@ $(function(){
 
     //  この部分の書き方は「jQueryメソッドチェーン」で検索すると出てきます
     $('#menu_soogo')
-      .animate({
-        'marginLeft': '650px',
-        'complete': setTimeout(function(){
-          mySlilentMoveTo_menuLink();
-        },4200)
+      .velocity({
+        'left': 700
       },2000,'easeInOutQuart')
-      .animate({
-        'marginBottom': '40px'
+      .velocity({
+        'bottom': 120
       },1000)
-      .animate({
+      .velocity({
         'opacity': 0,
+        'complete': setTimeout(function(){
+          mySlilentMoveTo_menuLink1();
+        },4000)
       },1000);
-    });
+  });
 
-  function mySlilentMoveTo_menuLink(){
+  function mySlilentMoveTo_menuLink1(){
+    $("#section1")
+      .velocity({
+        'opacity': 0,
+        'complete': setTimeout(function(){
+          mySlilentMoveTo_menuLink2();
+        },500)
+      },500);
+  }
+
+  function mySlilentMoveTo_menuLink2(){
     $.fn.fullpage.silentMoveTo("page_2", 0);
   }
 

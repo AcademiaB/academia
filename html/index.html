@@ -6,6 +6,7 @@
     <link href="../css/jquery.fullPage.css" rel="stylesheet">
     <link href="../css/style.css" rel="stylesheet">
     <script src="../js/vendors/jquery-1.11.2.min.js"></script>
+    <script src="../js/vendors/velocity.min.js"></script>
     <script src="../js/vendors/jquery.easing.1.3.js"></script>
     <script src="../js/vendors/jquery.easings.min.js"></script>
     <script src="../js/vendors/scrolloverflow.min.js"></script>
@@ -27,7 +28,7 @@
     </header>
     <div class="fullpage" id="fullpage" style="display: none">
       <section class="section top_menu" id="section1">
-        <div class="logo">
+        <div class="logo" id="menu_logo">
           <p class="logo__item"><a class="logo__item__link" href="#section1"><img class="menu_logo_image" src="../img/menu_logo.png" alt="メニューロゴ"></a></p>
         </div>
         <ul class="list clearfix">
@@ -69,7 +70,10 @@
             <div class="movie" id="slide3_2__movie">
               <p class="movie__gif" id="slide3_2__movie__gif"></p>
             </div>
-            <div class="answer"></div>
+            <div class="answer clearfix" id="slide3_2__answer">
+              <div class="answer__illust"><img class="image" src="../img/soogo01.png" alt="解説に付属するイラスト"></div>
+              <div class="answer__sentence"><img class="image" src="../img/uokatu_kaisetu01.png" alt="魚勝解説1"></div>
+            </div>
           </div>
         </div>
         <div class="slide" id="slide3_3">スライド3<img src="../img/jk01.png" alt="おこ"><img src="../img/jk01.png" alt="おこ"><img src="../img/jk01.png" alt="おこ"></div>

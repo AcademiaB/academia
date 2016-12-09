@@ -56,7 +56,8 @@ html, body {
     display: block; }
   .top_menu .logo {
     padding: 100px 0;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    opacity: 0; }
     .top_menu .logo__item {
       width: 900px;
       height: 400px;
@@ -87,8 +88,8 @@ html, body {
           height: auto; }
   .top_menu .soogo {
     position: absolute;
-    bottom: 80px;
-    left: 50px; }
+    bottom: 60px;
+    left: -200px; }
     .top_menu .soogo__image {
       width: auto;
       height: 200px; }
@@ -178,7 +179,14 @@ html, body {
     background-image: url("../img/menu_back_pattern.png");
     background-size: auto; }
     .fullpage #section3 .slide3_2 .back_layer .movie {
-      height: 100%; }
+      position: absolute;
+      z-index: 5;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      height: 100%;
+      margin: auto; }
       .fullpage #section3 .slide3_2 .back_layer .movie__gif {
         position: relative;
         height: 100%;
@@ -192,6 +200,41 @@ html, body {
           width: auto;
           height: 80%;
           margin: auto; }
+    .fullpage #section3 .slide3_2 .back_layer .answer {
+      position: absolute;
+      z-index: 4;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      width: 1200px;
+      height: 600px;
+      margin: auto;
+      background-color: #ff8e88; }
+      .fullpage #section3 .slide3_2 .back_layer .answer__illust {
+        position: relative;
+        width: 500px;
+        background-color: #CCC;
+        float: left; }
+        .fullpage #section3 .slide3_2 .back_layer .answer__illust .image {
+          position: absolute;
+          top: 0;
+          right: 0;
+          bottom: 0;
+          left: 0;
+          width: 400px;
+          height: auto;
+          margin: auto; }
+      .fullpage #section3 .slide3_2 .back_layer .answer__sentence {
+        width: 600px;
+        text-align: center;
+        background-color: #AAA;
+        float: right; }
+        .fullpage #section3 .slide3_2 .back_layer .answer__sentence .image {
+          width: 550px;
+          height: auto; }
+      .fullpage #section3 .slide3_2 .back_layer .answer__illust, .fullpage #section3 .slide3_2 .back_layer .answer__sentence {
+        height: 100%; }
 
 .fp-controlArrow.fp-prev {
   visibility: hidden; }

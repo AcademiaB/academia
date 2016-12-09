@@ -8,6 +8,7 @@ html(lang="ja")
     link(href="../css/style.css" rel="stylesheet")
       
     script(src="../js/vendors/jquery-1.11.2.min.js")
+    script(src="../js/vendors/velocity.min.js")
     script(src="../js/vendors/jquery.easing.1.3.js")
     script(src="../js/vendors/jquery.easings.min.js")
     script(src="../js/vendors/scrolloverflow.min.js")
@@ -19,7 +20,7 @@ html(lang="ja")
     include include/_header.pug
     #fullpage.fullpage(style="display: none;")
       section.section.top_menu#section1
-        .logo
+        .logo#menu_logo
           p.logo__item
             a.logo__item__link(href="#section1")
               img.menu_logo_image(src="../img/menu_logo.png" alt="メニューロゴ")
@@ -67,7 +68,11 @@ html(lang="ja")
           .back_layer
             .movie#slide3_2__movie
               p.movie__gif#slide3_2__movie__gif
-            .answer
+            .answer.clearfix#slide3_2__answer
+              .answer__illust
+                img.image(src="../img/soogo01.png" alt="解説に付属するイラスト")
+              .answer__sentence
+                img.image(src="../img/uokatu_kaisetu01.png" alt="魚勝解説1")
         .slide#slide3_3 スライド3
           img(src="../img/jk01.png" alt="おこ")
           img(src="../img/jk01.png" alt="おこ")

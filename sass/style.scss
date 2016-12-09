@@ -85,6 +85,7 @@ html,body {
         //  各sectionの高さを変えると、店舗選択に戻った際に高さがおかしくなる
         padding: 100px 0;
         box-sizing: border-box;
+        opacity: 0;
 
         &__item {
             width: 900px;
@@ -133,14 +134,14 @@ html,body {
 
     .soogo {
         position: absolute;
-        bottom: 80px;
-        left: 50px;
+        bottom: 60px;
+        left: -200px;
 
         &__image {
             width: auto;
             height: 200px;
         }
-    }
+    }//  .soogo
 }//  .top_menu
 
 
@@ -270,7 +271,14 @@ html,body {
 
                 //  gif画像用
                 .movie {
+                    position: absolute;
+                    z-index: 5;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
                     height: 100%;
+                    margin: auto;
 
                     &__gif {
                         position: relative;
@@ -291,7 +299,50 @@ html,body {
                 }//  .movie
 
                 .answer {
+                    position: absolute;
+                    z-index: 4;
+                    top: 0;
+                    right: 0;
+                    bottom: 0;
+                    left: 0;
+                    width: 1200px;
+                    height: 600px;
+                    margin: auto;
+                    background-color: $key_color2;
 
+                    &__illust {
+                        position: relative;
+                        width: 500px;
+                        background-color: #CCC;
+                        float: left;
+
+                        .image {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: 400px;
+                            height: auto;
+                            margin: auto;
+                        }
+                    }
+
+                    &__sentence {
+                        width: 600px;
+                        text-align: center;
+                        background-color: #AAA;
+                        float: right;
+
+                        .image {
+                            width: 550px;
+                            height: auto;
+                        }
+                    }
+
+                    &__illust,&__sentence {
+                        height: 100%;
+                    }
                 }//  .answer
             }//  .back_layer
         }//  .slide3_2
