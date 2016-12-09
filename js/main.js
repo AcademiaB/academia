@@ -1,22 +1,32 @@
 $(function(){
   fullpage_load();
 
-  /*
+
+
+
+  /**********
     マルバツを押した際の動作
-  */
+  **********/
   //  魚勝商店
   $(".quiz__choice__A #link_A").click(function (){
     alert("まるを選択！");
-    $.fn.fullpage.moveTo('page_2', 1);
+    $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo);
+
+    function mySilentMoveTo(){
+      $.fn.fullpage.silentMoveTo('page_2', 1);
+    }
   });
   $(".quiz__choice__B #link_B").click(function (){
     alert("ばつを選択！");
-    $.fn.fullpage.moveTo('page_2', 1);
+    $.fn.fullpage.silentMoveTo('page_2', 1);
   });
 });
 
 
 
+/**********
+fullpage.jsの読み込み(onload内で読んでます)
+**********/
 function fullpage_load(){
   $('#fullpage').fadeIn("slow");
 
@@ -34,7 +44,7 @@ function fullpage_load(){
       if(index == 1 && nextIndex == 2 && direction =='down'){
         alert("メニューから2店舗目へ");
         $("#section2 .fp-tableCell").addClass("js_d_none");
-        $("#slide2_1 .fp-tableCell").fadeIn(3000);
+        $("#slide2_1 .fp-tableCell").fadeIn(1000);
         $("#slide2_1 .fp-tableCell").removeClass("js_d_none");
       }
 
@@ -42,7 +52,7 @@ function fullpage_load(){
       if(index == 1 && nextIndex == 3 && direction =='down'){
         alert("メニューから2店舗目へ");
         $("#section3 .fp-tableCell").addClass("js_d_none");
-        $("#slide3_1 .fp-tableCell").fadeIn(3000);
+        $("#slide3_1 .fp-tableCell").fadeIn(1000);
         $("#slide3_1 .fp-tableCell").removeClass("js_d_none");
       }
 
@@ -50,7 +60,7 @@ function fullpage_load(){
       if(index == 1 && nextIndex == 4 && direction =='down'){
         alert("メニューから3店舗目へ");
         $("#section4 .fp-tableCell").addClass("js_d_none");
-        $("#slide4_1 .fp-tableCell").fadeIn(3000);
+        $("#slide4_1 .fp-tableCell").fadeIn(1000);
         $("#slide4_1 .fp-tableCell").removeClass("js_d_none");
       }
 
@@ -58,7 +68,7 @@ function fullpage_load(){
       if(index == 1 && nextIndex == 5 && direction =='down'){
         alert("メニューから4店舗目へ");
         $("#section5 .fp-tableCell").addClass("js_d_none");
-        $("#slide5_1 .fp-tableCell").fadeIn(3000);
+        $("#slide5_1 .fp-tableCell").fadeIn(1000);
         $("#slide5_1 .fp-tableCell").removeClass("js_d_none");
       }
 
@@ -73,9 +83,10 @@ function fullpage_load(){
       //  以下右方向への移動に関する条件
       //  3つめのセクション かつ 1枚目のスライド かつ 次のスライドが2枚目 かつ 右にスライドした場合
       if(index == 3 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
-        alert("右に移動して2枚目のスライドへ！！！");
         $("#slide3_1 .fp-tableCell").addClass("js_d_none");
-        $("#slide3_2 .fp-tableCell").fadeIn(3000,gifLoad);
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide3_2 .fp-tableCell").fadeIn(1000,gifLoad);
         $("#slide3_1 .fp-tableCell").fadeOut(100);
         $("#slide3_2 .fp-tableCell").removeClass("js_d_none");
 
@@ -83,10 +94,14 @@ function fullpage_load(){
         function gifLoad(){
           $("#slide3_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
 
+          //  gif画像が配置されたら開始
           $("#slide3_2__movie__gif .image").ready(function() {
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide3_2__movie__gif").fadeOut(1000);
-            },1500);
+            },3000);
           });
         }
       }
