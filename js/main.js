@@ -1,7 +1,17 @@
 $(function(){
   fullpage_load();
 
+  /**********
+    メニューの店舗をクリックした際の動作
+  **********/
+  //  魚勝商店
+  $("#menu_page2_link").click(function(){
+    $("#section1 .fp-tableCell").fadeOut(2000,mySlilentMoveTo_menuLink("page_2"));
+  });
 
+  function mySlilentMoveTo_menuLink(page){
+    $.fn.fullpage.silentMoveTo(page, 0);
+  }
 
 
 
@@ -11,20 +21,17 @@ $(function(){
   //  魚勝商店
   $(".quiz__choice__A #link_A").click(function (){
     alert("まるを選択！");
-    $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo);
-
-    function mySilentMoveTo(){
-      $.fn.fullpage.silentMoveTo('page_2', 1);
-    }
+    $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
   });
   $(".quiz__choice__B #link_B").click(function (){
     alert("ばつを選択！");
-    $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo);
-
-    function mySilentMoveTo(){
-      $.fn.fullpage.silentMoveTo('page_2', 1);
-    }
+    $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
   });
+
+  //  魚勝商店スライド1→スライド2
+  function mySilentMoveTo_uokatu1(){
+    $.fn.fullpage.silentMoveTo('page_2', 1);
+  }
 });
 
 
@@ -47,7 +54,7 @@ function fullpage_load(){
 
       //  メニューから1店舗目へのリンクを押した時
       if(index == 1 && nextIndex == 2 && direction =='down'){
-        alert("メニューから2店舗目へ");
+        alert("メニューから1店舗目へ");
         $("#section2 .fp-tableCell").addClass("js_d_none");
         $("#slide2_1 .fp-tableCell").fadeIn(1000);
         $("#slide2_1 .fp-tableCell").removeClass("js_d_none");
@@ -55,7 +62,7 @@ function fullpage_load(){
 
       //  メニューから2店舗目へのリンクを押した時
       if(index == 1 && nextIndex == 3 && direction =='down'){
-        alert("メニューから2店舗目へ");
+
         $("#section3 .fp-tableCell").addClass("js_d_none");
         $("#slide3_1 .fp-tableCell").fadeIn(1000);
         $("#slide3_1 .fp-tableCell").removeClass("js_d_none");
