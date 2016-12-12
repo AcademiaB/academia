@@ -70,7 +70,7 @@ html,body {
     position: relative;
     height: 100%;
     background-image: url("../img/menu_back_ryuguu.png");
-    background-size: contain;
+    background-size: 1920px auto;
     background-repeat: no-repeat;
     background-position: center;
 
@@ -103,21 +103,21 @@ html,body {
     }
 
     .list {
-        width: 1450px;
-        margin: 0 auto;
+        width: 1920px;
+        margin: 30px auto 0 auto;
         padding: 0 50px;
         box-sizing: border-box;
 
         &__item {
-            width: 300px;
+            width: 350px;
             height: auto;
             margin: 0 25px;
             float: left;
             &:first-child {
-                margin: 0 25px 0 0;
+                margin: 0 25px 0 135px;
             }
             &:last-child {
-                margin: 0 0 0 25px;
+                margin: 0 135px 0 25px;
             }
 
             &__link {
@@ -125,7 +125,7 @@ html,body {
                 text-align: center;
 
                 &__image {
-                    width: 300px;
+                    width: 350px;
                     height: auto;
                 }
             }
@@ -134,7 +134,7 @@ html,body {
 
     .soogo {
         position: absolute;
-        bottom: 60px;
+        bottom: 30px;
         left: -200px;
 
         &__image {
@@ -151,18 +151,20 @@ html,body {
     position: relative;
 
     #section3 {
-        .slide3_1 {
+        .slide3_1,.slide3_3 {
             .back_layer {
                 position: relative;
                 height: 100%;
                 background-color: #FFF;
-                background-image: url("../img/menu_back_pattern.png");
-                background-size: auto;
+                background-image: url("../img/quiz_back_ryuguu.png");
+                background-size: 1920px auto;
+                background-repeat: no-repeat;
+                background-position: center;
 
                 .quiz {
                     position: absolute;
                     right: 0;
-                    bottom: 200px;
+                    bottom: 150px;
                     left: 0;
                     width: 900px;
                     height: 600px;
@@ -256,18 +258,29 @@ html,body {
                         }
                     }
                 }//  .quiz
+
+                .slide_position_bar {
+                    position: absolute;
+                    top: auto;
+                    bottom: 50px;
+                    width: 100%;
+                    margin: auto;
+                    text-align: center;
+                }
             }//  .back_layer
         }//  .slide3_1
 
 
 
-        .slide3_2 {
+        .slide3_2,.slide3_4 {
             .back_layer {
                 position: relative;
                 height: 100%;
                 background-color: #FFF;
-                background-image: url("../img/menu_back_pattern.png");
-                background-size: auto;
+                background-image: url("../img/quiz_back_ryuguu.png");
+                background-size: 1920px auto;
+                background-repeat: no-repeat;
+                background-position: center;
 
                 //  gif画像用
                 .movie {
@@ -301,19 +314,17 @@ html,body {
                 .answer {
                     position: absolute;
                     z-index: 4;
-                    top: 0;
+                    top: auto;
                     right: 0;
-                    bottom: 0;
+                    bottom: 120px;
                     left: 0;
-                    width: 1200px;
+                    width: 1000px;
                     height: 600px;
                     margin: auto;
-                    background-color: $key_color2;
 
                     &__illust {
                         position: relative;
-                        width: 500px;
-                        background-color: #CCC;
+                        width: 400px;
                         float: left;
 
                         .image {
@@ -329,13 +340,12 @@ html,body {
                     }
 
                     &__sentence {
-                        width: 600px;
+                        width: 500px;
                         text-align: center;
-                        background-color: #AAA;
                         float: right;
 
                         .image {
-                            width: 550px;
+                            width: 500px;
                             height: auto;
                         }
                     }
@@ -344,6 +354,15 @@ html,body {
                         height: 100%;
                     }
                 }//  .answer
+
+                .slide_position_bar {
+                    position: absolute;
+                    top: auto;
+                    bottom: 50px;
+                    width: 100%;
+                    margin: auto;
+                    text-align: center;
+                }
             }//  .back_layer
         }//  .slide3_2
     }//  #section3
@@ -354,5 +373,9 @@ html,body {
 //  fullpage.cssの改変部分
 //  スライド内左右の矢印を非表示に
 .fp-controlArrow.fp-prev {
+    visibility: hidden;
+}
+
+.fp-controlArrow.fp-next {
     visibility: hidden;
 }

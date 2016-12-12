@@ -21,10 +21,10 @@ $(function(){
     //  この部分の書き方は「jQueryメソッドチェーン」で検索すると出てきます
     $('#menu_soogo')
       .velocity({
-        'left': 700
+        'left': 680
       },2000,'easeInOutQuart')
       .velocity({
-        'bottom': 120
+        'bottom': 80
       },1000)
       .velocity({
         'opacity': 0,
