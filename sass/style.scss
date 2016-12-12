@@ -284,6 +284,43 @@ html,body {
                     }
                 }//  .quiz
 
+                .shop_name {
+                    position: absolute;
+                    top: 125px;
+                    right: 0;
+                    bottom: auto;
+                    left: 0;
+
+                    &__container {
+                        width: 620px;
+                        margin: 0 auto;
+
+                        .fugu {
+                            display: block;
+                            width: 100px;
+                            height: 100px;
+                            float: left;
+
+                            .image {
+                                width: 100px;
+                                height: 100px;
+                            }
+                        }
+
+                        .word {
+                            display: block;
+                            width: 300px;
+                            margin: 25px 60px;
+                            letter-spacing: 20px;
+                            text-indent: 20px;
+                            color: #222;
+                            font-weight: bold;
+                            @include font-size(50);
+                            float: left;
+                        }
+                    }
+                }//  .shop_name
+
                 .slide_position_bar {
                     position: absolute;
                     top: auto;
@@ -395,7 +432,20 @@ html,body {
 
 
 
-//  fullpage.cssの改変部分
+
+/**********
+どこにでも使えるクラス
+**********/
+//  画像などを左右反転させたい時
+.reverse {
+    transform: scale(-1, 1);
+}
+
+
+
+/**********
+fullpage.cssの改変部分
+**********/
 //  スライド内左右の矢印を非表示に
 .fp-controlArrow.fp-prev {
     visibility: hidden;

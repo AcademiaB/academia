@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .js_v_hidden {
   visibility: hidden; }
 
@@ -192,6 +193,34 @@ html, body {
         .fullpage #section3 .slide3_1 .back_layer .quiz__choice__soogo, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__soogo {
           width: 200px;
           float: left; }
+    .fullpage #section3 .slide3_1 .back_layer .shop_name, .fullpage #section3 .slide3_3 .back_layer .shop_name {
+      position: absolute;
+      top: 125px;
+      right: 0;
+      bottom: auto;
+      left: 0; }
+      .fullpage #section3 .slide3_1 .back_layer .shop_name__container, .fullpage #section3 .slide3_3 .back_layer .shop_name__container {
+        width: 620px;
+        margin: 0 auto; }
+        .fullpage #section3 .slide3_1 .back_layer .shop_name__container .fugu, .fullpage #section3 .slide3_3 .back_layer .shop_name__container .fugu {
+          display: block;
+          width: 100px;
+          height: 100px;
+          float: left; }
+          .fullpage #section3 .slide3_1 .back_layer .shop_name__container .fugu .image, .fullpage #section3 .slide3_3 .back_layer .shop_name__container .fugu .image {
+            width: 100px;
+            height: 100px; }
+        .fullpage #section3 .slide3_1 .back_layer .shop_name__container .word, .fullpage #section3 .slide3_3 .back_layer .shop_name__container .word {
+          display: block;
+          width: 300px;
+          margin: 25px 60px;
+          letter-spacing: 20px;
+          text-indent: 20px;
+          color: #222;
+          font-weight: bold;
+          font-size: 50px;
+          font-size: 3.125rem;
+          float: left; }
     .fullpage #section3 .slide3_1 .back_layer .slide_position_bar, .fullpage #section3 .slide3_3 .back_layer .slide_position_bar {
       position: absolute;
       top: auto;
@@ -269,6 +298,15 @@ html, body {
       margin: auto;
       text-align: center; }
 
+/**********
+どこにでも使えるクラス
+**********/
+.reverse {
+  transform: scale(-1, 1); }
+
+/**********
+fullpage.cssの改変部分
+**********/
 .fp-controlArrow.fp-prev {
   visibility: hidden; }
 
