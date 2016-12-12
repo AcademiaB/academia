@@ -65,6 +65,17 @@ $(function(){
   function mySilentMoveTo_uokatu1(){
     $.fn.fullpage.silentMoveTo('page_2', 1);
   }
+
+
+
+  /**********
+  マルバツをhoverした時に上下させる
+  **********/
+  $("#slide3_1 #link_A,#link_B")
+    .velocity(
+      {marginTop: "-5px"},
+      {loop: true}
+    );
 });
 
 

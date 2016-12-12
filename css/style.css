@@ -47,14 +47,25 @@ html, body {
 
 .top_menu {
   position: relative;
-  height: 100%;
-  background-image: url("../img/menu_back_ryuguu.png");
-  background-size: 1920px auto;
-  background-repeat: no-repeat;
-  background-position: center; }
+  height: 100%; }
   .top_menu .fp-tableCell {
     display: block; }
+  .top_menu .menu_back {
+    position: absolute;
+    z-index: 3;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    text-align: center; }
+    .top_menu .menu_back .image {
+      width: 1700px;
+      height: auto; }
   .top_menu .logo {
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 4;
     padding: 100px 0;
     box-sizing: border-box;
     opacity: 0; }
@@ -67,27 +78,34 @@ html, body {
         width: auto;
         height: 400px; }
   .top_menu .list {
-    width: 1920px;
-    margin: 30px auto 0 auto;
+    position: absolute;
+    z-index: 4;
+    top: auto;
+    right: 0;
+    bottom: 140px;
+    left: 0;
+    width: 1700px;
+    margin: auto;
     padding: 0 50px;
     box-sizing: border-box; }
     .top_menu .list__item {
       width: 350px;
       height: auto;
-      margin: 0 25px;
+      margin: 0 10px;
       float: left; }
       .top_menu .list__item:first-child {
-        margin: 0 25px 0 135px; }
+        margin: 0 0 0 80px; }
       .top_menu .list__item:last-child {
-        margin: 0 135px 0 25px; }
+        margin: 0 80px 0 0; }
       .top_menu .list__item__link {
         display: block;
         text-align: center; }
         .top_menu .list__item__link__image {
-          width: 350px;
+          width: 300px;
           height: auto; }
   .top_menu .soogo {
     position: absolute;
+    z-index: 4;
     bottom: 30px;
     left: -200px; }
     .top_menu .soogo__image {
