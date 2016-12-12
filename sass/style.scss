@@ -284,43 +284,6 @@ html,body {
                     }
                 }//  .quiz
 
-                .shop_name {
-                    position: absolute;
-                    top: 125px;
-                    right: 0;
-                    bottom: auto;
-                    left: 0;
-
-                    &__container {
-                        width: 620px;
-                        margin: 0 auto;
-
-                        .fugu {
-                            display: block;
-                            width: 100px;
-                            height: 100px;
-                            float: left;
-
-                            .image {
-                                width: 100px;
-                                height: 100px;
-                            }
-                        }
-
-                        .word {
-                            display: block;
-                            width: 300px;
-                            margin: 25px 60px;
-                            letter-spacing: 20px;
-                            text-indent: 20px;
-                            color: #222;
-                            font-weight: bold;
-                            @include font-size(50);
-                            float: left;
-                        }
-                    }
-                }//  .shop_name
-
                 .slide_position_bar {
                     position: absolute;
                     top: auto;
@@ -334,7 +297,7 @@ html,body {
 
 
 
-        .slide3_2,.slide3_4 {
+        .slide3_2 {
             .back_layer {
                 position: relative;
                 height: 100%;
@@ -429,6 +392,47 @@ html,body {
         }//  .slide3_2
     }//  #section3
 }//  .fullpage
+
+
+/**********
+共通部分
+**********/
+.shop_name {
+    position: absolute;
+    top: 125px;
+    right: 0;
+    bottom: auto;
+    left: 0;
+
+    &__container {
+        width: 620px;
+        margin: 0 auto;
+
+        .fugu {
+            display: block;
+            width: 100px;
+            height: 100px;
+            float: left;
+
+            .image {
+                width: 100px;
+                height: 100px;
+            }
+        }
+
+        .word {
+            display: block;
+            width: 300px;
+            margin: 25px 60px;
+            letter-spacing: 20px;
+            text-indent: 20px;
+            color: #222;
+            font-weight: bold;
+            @include font-size(50);
+            float: left;
+        }
+    }
+}//  .shop_name
 
 
 

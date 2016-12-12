@@ -193,34 +193,6 @@ html, body {
         .fullpage #section3 .slide3_1 .back_layer .quiz__choice__soogo, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__soogo {
           width: 200px;
           float: left; }
-    .fullpage #section3 .slide3_1 .back_layer .shop_name, .fullpage #section3 .slide3_3 .back_layer .shop_name {
-      position: absolute;
-      top: 125px;
-      right: 0;
-      bottom: auto;
-      left: 0; }
-      .fullpage #section3 .slide3_1 .back_layer .shop_name__container, .fullpage #section3 .slide3_3 .back_layer .shop_name__container {
-        width: 620px;
-        margin: 0 auto; }
-        .fullpage #section3 .slide3_1 .back_layer .shop_name__container .fugu, .fullpage #section3 .slide3_3 .back_layer .shop_name__container .fugu {
-          display: block;
-          width: 100px;
-          height: 100px;
-          float: left; }
-          .fullpage #section3 .slide3_1 .back_layer .shop_name__container .fugu .image, .fullpage #section3 .slide3_3 .back_layer .shop_name__container .fugu .image {
-            width: 100px;
-            height: 100px; }
-        .fullpage #section3 .slide3_1 .back_layer .shop_name__container .word, .fullpage #section3 .slide3_3 .back_layer .shop_name__container .word {
-          display: block;
-          width: 300px;
-          margin: 25px 60px;
-          letter-spacing: 20px;
-          text-indent: 20px;
-          color: #222;
-          font-weight: bold;
-          font-size: 50px;
-          font-size: 3.125rem;
-          float: left; }
     .fullpage #section3 .slide3_1 .back_layer .slide_position_bar, .fullpage #section3 .slide3_3 .back_layer .slide_position_bar {
       position: absolute;
       top: auto;
@@ -228,7 +200,7 @@ html, body {
       width: 100%;
       margin: auto;
       text-align: center; }
-  .fullpage #section3 .slide3_2 .back_layer, .fullpage #section3 .slide3_4 .back_layer {
+  .fullpage #section3 .slide3_2 .back_layer {
     position: relative;
     height: 100%;
     background-color: #FFF;
@@ -236,7 +208,7 @@ html, body {
     background-size: 1920px auto;
     background-repeat: no-repeat;
     background-position: center; }
-    .fullpage #section3 .slide3_2 .back_layer .movie, .fullpage #section3 .slide3_4 .back_layer .movie {
+    .fullpage #section3 .slide3_2 .back_layer .movie {
       position: absolute;
       z-index: 5;
       top: 0;
@@ -245,11 +217,11 @@ html, body {
       left: 0;
       height: 100%;
       margin: auto; }
-      .fullpage #section3 .slide3_2 .back_layer .movie__gif, .fullpage #section3 .slide3_4 .back_layer .movie__gif {
+      .fullpage #section3 .slide3_2 .back_layer .movie__gif {
         position: relative;
         height: 100%;
         text-align: center; }
-        .fullpage #section3 .slide3_2 .back_layer .movie__gif .image, .fullpage #section3 .slide3_4 .back_layer .movie__gif .image {
+        .fullpage #section3 .slide3_2 .back_layer .movie__gif .image {
           position: absolute;
           top: 0;
           right: 0;
@@ -258,7 +230,7 @@ html, body {
           width: auto;
           height: 80%;
           margin: auto; }
-    .fullpage #section3 .slide3_2 .back_layer .answer, .fullpage #section3 .slide3_4 .back_layer .answer {
+    .fullpage #section3 .slide3_2 .back_layer .answer {
       position: absolute;
       z-index: 4;
       top: auto;
@@ -268,11 +240,11 @@ html, body {
       width: 1000px;
       height: 600px;
       margin: auto; }
-      .fullpage #section3 .slide3_2 .back_layer .answer__illust, .fullpage #section3 .slide3_4 .back_layer .answer__illust {
+      .fullpage #section3 .slide3_2 .back_layer .answer__illust {
         position: relative;
         width: 400px;
         float: left; }
-        .fullpage #section3 .slide3_2 .back_layer .answer__illust .image, .fullpage #section3 .slide3_4 .back_layer .answer__illust .image {
+        .fullpage #section3 .slide3_2 .back_layer .answer__illust .image {
           position: absolute;
           top: 0;
           right: 0;
@@ -281,22 +253,54 @@ html, body {
           width: 400px;
           height: auto;
           margin: auto; }
-      .fullpage #section3 .slide3_2 .back_layer .answer__sentence, .fullpage #section3 .slide3_4 .back_layer .answer__sentence {
+      .fullpage #section3 .slide3_2 .back_layer .answer__sentence {
         width: 500px;
         text-align: center;
         float: right; }
-        .fullpage #section3 .slide3_2 .back_layer .answer__sentence .image, .fullpage #section3 .slide3_4 .back_layer .answer__sentence .image {
+        .fullpage #section3 .slide3_2 .back_layer .answer__sentence .image {
           width: 500px;
           height: auto; }
-      .fullpage #section3 .slide3_2 .back_layer .answer__illust, .fullpage #section3 .slide3_2 .back_layer .answer__sentence, .fullpage #section3 .slide3_4 .back_layer .answer__illust, .fullpage #section3 .slide3_4 .back_layer .answer__sentence {
+      .fullpage #section3 .slide3_2 .back_layer .answer__illust, .fullpage #section3 .slide3_2 .back_layer .answer__sentence {
         height: 100%; }
-    .fullpage #section3 .slide3_2 .back_layer .slide_position_bar, .fullpage #section3 .slide3_4 .back_layer .slide_position_bar {
+    .fullpage #section3 .slide3_2 .back_layer .slide_position_bar {
       position: absolute;
       top: auto;
       bottom: 50px;
       width: 100%;
       margin: auto;
       text-align: center; }
+
+/**********
+共通部分
+**********/
+.shop_name {
+  position: absolute;
+  top: 125px;
+  right: 0;
+  bottom: auto;
+  left: 0; }
+  .shop_name__container {
+    width: 620px;
+    margin: 0 auto; }
+    .shop_name__container .fugu {
+      display: block;
+      width: 100px;
+      height: 100px;
+      float: left; }
+      .shop_name__container .fugu .image {
+        width: 100px;
+        height: 100px; }
+    .shop_name__container .word {
+      display: block;
+      width: 300px;
+      margin: 25px 60px;
+      letter-spacing: 20px;
+      text-indent: 20px;
+      color: #222;
+      font-weight: bold;
+      font-size: 50px;
+      font-size: 3.125rem;
+      float: left; }
 
 /**********
 どこにでも使えるクラス
