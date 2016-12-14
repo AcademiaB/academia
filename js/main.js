@@ -141,6 +141,7 @@ function fullpage_load(){
       if(index == 3 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
         $("#slide3_1 .fp-tableCell").addClass("js_d_none");
         $("#slide3_2__answer").addClass("js_d_none");
+        $("#slide3_2__incorrect_soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide3_2 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -154,12 +155,18 @@ function fullpage_load(){
           //  gif画像が配置されたら開始
           $("#slide3_2__movie__gif .image").ready(function() {
 
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide3_2__incorrect_soogo").fadeIn(1000);
+            },2000);
+
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide3_2__movie__gif").fadeOut(1000);
+              $("#slide3_2__incorrect_soogo").fadeOut(1000);
               $("#slide3_2__answer").fadeIn(1000);
-            },3000);
+            },6000);
           });
         }
       }
