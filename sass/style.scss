@@ -191,22 +191,23 @@ html,body {
                     right: 0;
                     bottom: 150px;
                     left: 0;
-                    width: 900px;
-                    height: 600px;
+                    width: 1200px;
+                    height: 700px;
                     margin: auto;
 
                     //  .quiz__word
                     //  クイズの問題文部分の外枠
                     &__word {
                         position: relative;
-                        width: 900px;
+                        width: 1200px;
                         height: 300px;
+                        margin: 0 0 50px 0;
 
                         .question {
                             position: relative;
-                            width: 750px;
-                            height: 200px;
-                            margin: 25px auto 0 auto;
+                            width: 1100px;
+                            height: 300px;
+                            margin: 75px auto 0 auto;
                             border: 10px solid $key_color2;
                             box-sizing: border-box;
                             background-color: #FFF;
@@ -215,12 +216,12 @@ html,body {
                                 position: absolute;
                                 right: 0;
                                 left: 0;
-                                width: 650px;
+                                width: 950px;
                                 margin: 22px auto;
-                                line-height: 2;
+                                line-height: 2.3;
                                 color: $key_color2;
                                 font-weight: bold;
-                                @include font-size(34);
+                                @include font-size(50);
 
                                 span {
                                     display: block;
@@ -229,20 +230,20 @@ html,body {
 
                             &__circle {
                                 position: absolute;
-                                top: -30px;
-                                left: -30px;
-                                width: 80px;
-                                height: 80px;
-                                @include border-radius(40);
+                                top: -50px;
+                                left: -50px;
+                                width: 120px;
+                                height: 120px;
+                                @include border-radius(60);
                                 background-color: $key_color2;
 
                                 &__number {
-                                    height: 80px;
-                                    line-height: 80px;
+                                    height: 120px;
+                                    line-height: 120px;
                                     text-align: center;
                                     color: #FFF;
                                     font-weight: bold;
-                                    @include font-size(30);
+                                    @include font-size(50);
                                 }
                             }
                         }//  .question
@@ -253,6 +254,7 @@ html,body {
                     &__choice {
                         width: 900px;
                         height: 300px;
+                        margin: 0 auto;
 
                         &__A {
                             width: 300px;

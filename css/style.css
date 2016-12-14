@@ -129,53 +129,55 @@ html, body {
       right: 0;
       bottom: 150px;
       left: 0;
-      width: 900px;
-      height: 600px;
+      width: 1200px;
+      height: 700px;
       margin: auto; }
       .fullpage #section3 .slide3_1 .back_layer .quiz__word, .fullpage #section3 .slide3_3 .back_layer .quiz__word {
         position: relative;
-        width: 900px;
-        height: 300px; }
+        width: 1200px;
+        height: 300px;
+        margin: 0 0 50px 0; }
         .fullpage #section3 .slide3_1 .back_layer .quiz__word .question, .fullpage #section3 .slide3_3 .back_layer .quiz__word .question {
           position: relative;
-          width: 750px;
-          height: 200px;
-          margin: 25px auto 0 auto;
-          border: 10px solid #ff8e88;
+          width: 1100px;
+          height: 300px;
+          margin: 75px auto 0 auto;
+          border: 10px solid #023dac;
           box-sizing: border-box;
           background-color: #FFF; }
           .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__word, .fullpage #section3 .slide3_3 .back_layer .quiz__word .question__word {
             position: absolute;
             right: 0;
             left: 0;
-            width: 650px;
+            width: 950px;
             margin: 22px auto;
-            line-height: 2;
-            color: #ff8e88;
+            line-height: 2.3;
+            color: #023dac;
             font-weight: bold;
-            font-size: 34px;
-            font-size: 2.125rem; }
+            font-size: 50px;
+            font-size: 3.125rem; }
             .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__word span, .fullpage #section3 .slide3_3 .back_layer .quiz__word .question__word span {
               display: block; }
           .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__circle, .fullpage #section3 .slide3_3 .back_layer .quiz__word .question__circle {
             position: absolute;
-            top: -30px;
-            left: -30px;
-            width: 80px;
-            height: 80px;
-            border-radius: 40px;
-            background-color: #ff8e88; }
+            top: -50px;
+            left: -50px;
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            background-color: #023dac; }
             .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__circle__number, .fullpage #section3 .slide3_3 .back_layer .quiz__word .question__circle__number {
-              height: 80px;
-              line-height: 80px;
+              height: 120px;
+              line-height: 120px;
               text-align: center;
               color: #FFF;
               font-weight: bold;
-              font-size: 30px;
-              font-size: 1.875rem; }
+              font-size: 50px;
+              font-size: 3.125rem; }
       .fullpage #section3 .slide3_1 .back_layer .quiz__choice, .fullpage #section3 .slide3_3 .back_layer .quiz__choice {
         width: 900px;
-        height: 300px; }
+        height: 300px;
+        margin: 0 auto; }
         .fullpage #section3 .slide3_1 .back_layer .quiz__choice__A, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__A {
           width: 300px;
           margin: 0 0 0 50px; }
