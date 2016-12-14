@@ -69,7 +69,7 @@ $(function(){
 
 
   /**********
-  マルバツをhoverした時に上下させる
+  マルバツを常に上下させる
   **********/
   $("#slide3_1 #link_A,#link_B")
     .velocity(
@@ -140,6 +140,7 @@ function fullpage_load(){
       //  3つめのセクション かつ 1枚目のスライド かつ 次のスライドが2枚目 かつ 右にスライドした場合
       if(index == 3 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
         $("#slide3_1 .fp-tableCell").addClass("js_d_none");
+        $("#slide3_2__answer").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide3_2 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -157,6 +158,7 @@ function fullpage_load(){
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide3_2__movie__gif").fadeOut(1000);
+              $("#slide3_2__answer").fadeIn(1000);
             },3000);
           });
         }
