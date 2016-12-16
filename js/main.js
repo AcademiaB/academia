@@ -150,7 +150,7 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide3_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide3_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
 
           //  gif画像が配置されたら開始
           $("#slide3_2__movie__gif .image").ready(function() {
