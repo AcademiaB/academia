@@ -117,27 +117,25 @@ html, body {
     height: 100%;
     background-color: #FFF;
     background-image: url("../img/quiz_back_ryuguu.png");
-    background-size: 1920px auto;
+    background-size: 100% auto;
     background-repeat: no-repeat;
     background-position: center; }
     .fullpage #section3 .slide3_1 .back_layer .quiz, .fullpage #section3 .slide3_3 .back_layer .quiz {
       position: absolute;
+      top: 30%;
       right: 0;
-      bottom: 150px;
       left: 0;
-      width: 1200px;
-      height: 700px;
+      width: 55%;
+      height: 40%;
       margin: auto; }
       .fullpage #section3 .slide3_1 .back_layer .quiz__word, .fullpage #section3 .slide3_3 .back_layer .quiz__word {
         position: relative;
-        width: 1200px;
-        height: 300px;
-        margin: 0 0 50px 0; }
+        height: 50%;
+        margin: 0 0 5% 0; }
         .fullpage #section3 .slide3_1 .back_layer .quiz__word .question, .fullpage #section3 .slide3_3 .back_layer .quiz__word .question {
           position: relative;
-          width: 1100px;
-          height: 300px;
-          margin: 75px auto 0 auto;
+          height: 100%;
+          margin: 5% auto 0 auto;
           border: 10px solid #023dac;
           box-sizing: border-box;
           background-color: #FFF; }
@@ -145,61 +143,47 @@ html, body {
             position: absolute;
             right: 0;
             left: 0;
-            width: 950px;
-            margin: 22px auto;
-            line-height: 2.3;
+            width: 100%;
+            height: 100%;
+            padding: 2% 0 0 8%;
+            box-sizing: border-box;
+            line-height: 2;
             color: #023dac;
             font-weight: bold;
-            font-size: 50px;
-            font-size: 3.125rem; }
+            font-size: 2.5vw; }
             .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__word span, .fullpage #section3 .slide3_3 .back_layer .quiz__word .question__word span {
               display: block; }
-          .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__circle, .fullpage #section3 .slide3_3 .back_layer .quiz__word .question__circle {
-            position: absolute;
-            top: -50px;
-            left: -50px;
-            width: 120px;
-            height: 120px;
-            border-radius: 60px;
-            background-color: #023dac; }
-            .fullpage #section3 .slide3_1 .back_layer .quiz__word .question__circle__number, .fullpage #section3 .slide3_3 .back_layer .quiz__word .question__circle__number {
-              height: 120px;
-              line-height: 120px;
-              text-align: center;
-              color: #FFF;
-              font-weight: bold;
-              font-size: 50px;
-              font-size: 3.125rem; }
       .fullpage #section3 .slide3_1 .back_layer .quiz__choice, .fullpage #section3 .slide3_3 .back_layer .quiz__choice {
-        width: 900px;
-        height: 300px;
+        width: 100%;
+        height: 30%;
         margin: 0 auto; }
-        .fullpage #section3 .slide3_1 .back_layer .quiz__choice__A, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__A {
-          width: 300px;
-          margin: 0 0 0 50px; }
-        .fullpage #section3 .slide3_1 .back_layer .quiz__choice__B, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__B {
-          width: 300px;
-          margin: 0 50px 0 0; }
         .fullpage #section3 .slide3_1 .back_layer .quiz__choice__A, .fullpage #section3 .slide3_1 .back_layer .quiz__choice__B, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__A, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__B {
+          width: 30%;
           text-align: center;
           float: left; }
           .fullpage #section3 .slide3_1 .back_layer .quiz__choice__A .link, .fullpage #section3 .slide3_1 .back_layer .quiz__choice__B .link, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__A .link, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__B .link {
             display: block; }
             .fullpage #section3 .slide3_1 .back_layer .quiz__choice__A .link .image, .fullpage #section3 .slide3_1 .back_layer .quiz__choice__B .link .image, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__A .link .image, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__B .link .image {
-              width: auto;
-              height: 300px; }
+              width: 100%;
+              height: auto; }
         .fullpage #section3 .slide3_1 .back_layer .quiz__choice__soogo, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__soogo {
-          width: 200px;
-          float: left; }
+          width: 40%;
+          float: left;
+          text-align: center; }
           .fullpage #section3 .slide3_1 .back_layer .quiz__choice__soogo .image, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__soogo .image {
-            margin: 50px 0 0 0; }
+            width: 70%;
+            height: auto;
+            margin: 0 0; }
     .fullpage #section3 .slide3_1 .back_layer .slide_position_bar, .fullpage #section3 .slide3_3 .back_layer .slide_position_bar {
       position: absolute;
       top: auto;
-      bottom: 50px;
+      bottom: 8%;
       width: 100%;
       margin: auto;
       text-align: center; }
+      .fullpage #section3 .slide3_1 .back_layer .slide_position_bar .image, .fullpage #section3 .slide3_3 .back_layer .slide_position_bar .image {
+        width: 60%;
+        height: auto; }
   .fullpage #section3 .slide3_2 .back_layer {
     position: relative;
     height: 100%;
@@ -294,31 +278,32 @@ html, body {
 **********/
 .shop_name {
   position: absolute;
-  top: 125px;
+  top: 15%;
   right: 0;
-  bottom: auto;
   left: 0; }
   .shop_name__container {
-    width: 620px;
+    width: 50%;
     margin: 0 auto; }
     .shop_name__container .fugu {
       display: block;
-      width: 100px;
-      height: 100px;
+      width: 20%;
+      height: 100%;
       float: left; }
       .shop_name__container .fugu .image {
-        width: 100px;
-        height: 100px; }
+        width: 80%;
+        height: auto; }
+    .shop_name__container .fugu_left {
+      text-align: right; }
     .shop_name__container .word {
       display: block;
-      width: 300px;
-      margin: 25px 60px;
+      width: 60%;
+      margin: 5% 0;
+      text-align: center;
       letter-spacing: 20px;
       text-indent: 20px;
       color: #222;
       font-weight: bold;
-      font-size: 50px;
-      font-size: 3.125rem;
+      font-size: 3.5vw;
       float: left; }
 
 /**********
