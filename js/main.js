@@ -158,7 +158,7 @@ function fullpage_load(){
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide3_2__incorrect_soogo").fadeIn(1000);
-            },2000);
+            },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
@@ -166,7 +166,7 @@ function fullpage_load(){
               $("#slide3_2__movie__gif").fadeOut(1000);
               $("#slide3_2__incorrect_soogo").fadeOut(1000);
               $("#slide3_2__answer").fadeIn(1000);
-            },6000);
+            },8000);
           });
         }
       }
