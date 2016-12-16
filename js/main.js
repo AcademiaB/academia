@@ -4,7 +4,7 @@ $(function(){
   setTimeout(function(){
     $('#menu_soogo')
       .velocity({
-        'left': 50
+        'left': "5%"
       },2000);
     $('#menu_logo')
       .velocity({
@@ -21,10 +21,10 @@ $(function(){
     //  この部分の書き方は「jQueryメソッドチェーン」で検索すると出てきます
     $('#menu_soogo')
       .velocity({
-        'left': 680
+        'left': "34%"
       },2000,'easeInOutQuart')
       .velocity({
-        'bottom': 80
+        'bottom': "10%"
       },1000)
       .velocity({
         'opacity': 0,
