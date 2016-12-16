@@ -195,6 +195,8 @@ html, body {
         .fullpage #section3 .slide3_1 .back_layer .quiz__choice__soogo, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__soogo {
           width: 200px;
           float: left; }
+          .fullpage #section3 .slide3_1 .back_layer .quiz__choice__soogo .image, .fullpage #section3 .slide3_3 .back_layer .quiz__choice__soogo .image {
+            margin: 50px 0 0 0; }
     .fullpage #section3 .slide3_1 .back_layer .slide_position_bar, .fullpage #section3 .slide3_3 .back_layer .slide_position_bar {
       position: absolute;
       top: auto;
