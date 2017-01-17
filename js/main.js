@@ -278,7 +278,7 @@ function fullpage_load(){
       }
 
       //  3つめのセクション かつ 5枚目のスライド かつ 次のスライドが6枚目 かつ 右にスライドした場合
-      if(index == 3 && slideIndex == 2 && nextSlideIndex == 3 && direction == 'right'){
+      if(index == 3 && slideIndex == 4 && nextSlideIndex == 5 && direction == 'right'){
         $("#slide3_5 .fp-tableCell").addClass("js_d_none");
         $("#slide3_6__answer").addClass("js_d_none");
         $("#slide3_6__incorrect_soogo").addClass("js_d_none");

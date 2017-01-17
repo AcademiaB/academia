@@ -180,11 +180,11 @@ html,body {
 
                 .quiz {
                     position: absolute;
-                    top: 30%;
+                    top: 23%;
                     right: 0;
                     left: 0;
-                    width: 55%;
-                    height: 40%;
+                    width: 60%;
+                    height: 50%;
                     margin: auto;
 
                     //  .quiz__word
@@ -203,22 +203,34 @@ html,body {
                             background-color: #FFF;
 
                             &__word {
+
+                                //  2行なら
                                 position: absolute;
                                 right: 0;
                                 left: 0;
                                 width: 100%;
                                 height: 100%;
-                                padding: 2% 0 0 8%;//  attention
+                                padding: 5%;//  attention
                                 box-sizing: border-box;
-                                line-height: 2;
                                 color: $key_color2;
                                 font-weight: bold;
-                                font-size: 2.5vw;
+                                font-size: 2.8vw;
 
                                 span {
                                     display: block;
                                 }
                             }//  .question__word
+
+                            //  各問題文の長さごとに調整
+                            //  1行
+                            .one_column {
+                                line-height: 3.6;
+                                text-align: center;
+                            }
+
+                            .two_column {
+                                line-height: 1.8;
+                            }
                         }//  .question
                     }//  .quiz__word
 
@@ -342,15 +354,15 @@ html,body {
                     z-index: 4;
                     top: auto;
                     right: 0;
-                    bottom: 16%;
+                    bottom: 20%;
                     left: 0;
-                    width: 50%;
-                    height: auto;
+                    width: 60%;
+                    height: 50%;
                     margin: auto;
 
                     &__illust {
                         width: 40%;
-                        height: auto;
+                        height: 100%;
                         float: left;
 
                         .link{
@@ -365,18 +377,36 @@ html,body {
                     }
 
                     &__sentence {
-                        width: 50%;
+                        width: 60%;
+                        height: 100%;
                         text-align: center;
+                        vertical-align: middle;
                         float: right;
 
-                        .image {
-                            width: 100%;
-                            height: auto;
-                        }
-                    }
+                        .word {
+                            position: relative;
+                            width: 90%;
+                            height: 90%;
+                            margin: 5% auto;
+                            border: 10px solid $key_color2;
+                            border-radius: 20px;
+                            box-sizing: border-box;
+                            background-color: #fff;
 
-                    &__illust,&__sentence {
-                        height: auto;
+                            &__main {
+                                position: absolute;
+                                top: 0;
+                                right: 0;
+                                bottom: 0;
+                                left: 0;
+                                margin: auto;
+                                padding: 10% 8%;
+                                line-height: 3vw;
+                                text-align: left;
+                                word-wrap: break-word;
+                                font-size: 2.2vw;
+                            }
+                        }
                     }
                 }//  .answer
 

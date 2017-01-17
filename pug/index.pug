@@ -53,7 +53,7 @@ html(lang="ja")
             .quiz
               .quiz__word
                 .question
-                  p.question__word
+                  .question__word.two_column
                     span 名古屋市中央卸売市場では
                     span 一般の人がセリに参加することができる！
               .quiz__choice.clearfix
@@ -85,7 +85,8 @@ html(lang="ja")
                 a.link#next_quiz(href="#")
                   img.image(src="../img/soogo01.png" alt="解説に付属するイラスト")
               .answer__sentence
-                img.image(src="../img/uokatu_kaisetu01.png" alt="魚勝解説1")
+                .word
+                  p.word__main 一般の人は魚のセリには参加できません。また、市場内の店舗は基本的に業務用ですが、人気の食堂は一般の人も利用できます。
             .slide_position_bar
               img.image(src="../img/slide_position_bar.png" alt="現在のスライド表示バー")
             .shop_name
@@ -100,9 +101,8 @@ html(lang="ja")
             .quiz
               .quiz__word
                 .question
-                  p.question__word
-                    span 名古屋市中央卸売市場では
-                    span 一般の人がセリに参加することができる！
+                  .question__word.one_column
+                    span 青森県の大間のマグロが最も美味しい
               .quiz__choice.clearfix
                 p.quiz__choice__A
                   a.link#link_A_3_3(href="#")
@@ -132,7 +132,8 @@ html(lang="ja")
                 a.link#next_quiz(href="#")
                   img.image(src="../img/soogo01.png" alt="解説に付属するイラスト")
               .answer__sentence
-                img.image(src="../img/uokatu_kaisetu01.png" alt="魚勝解説1")
+                .word
+                  p.word__main 様々な産地の種類、味の特徴があり有名ブランドだから最も美味しいわけではありません。名古屋では、他地域に比べてキハダマグロが好まれます。
             .slide_position_bar
               img.image(src="../img/slide_position_bar.png" alt="現在のスライド表示バー")
             .shop_name
@@ -147,9 +148,9 @@ html(lang="ja")
             .quiz
               .quiz__word
                 .question
-                  p.question__word
-                    span 名古屋市中央卸売市場では
-                    span 一般の人がセリに参加することができる！
+                  .question__word.two_column
+                    span 記憶に残る一番大きなマグロは全長
+                    span 288㎝重さ483㎏のクロマグロである。
               .quiz__choice.clearfix
                 p.quiz__choice__A
                   a.link#link_A_3_5(href="#")
@@ -179,7 +180,8 @@ html(lang="ja")
                 a.link#next_quiz(href="#")
                   img.image(src="../img/soogo01.png" alt="解説に付属するイラスト")
               .answer__sentence
-                img.image(src="../img/uokatu_kaisetu01.png" alt="魚勝解説1")
+                .word
+                  p.word__main タイセイヨウクロマグロで全長458㎝、重さ680㎏の記録があります。大西洋の熱帯海域に分布しており、日本にも食用として輸入されています。
             .slide_position_bar
               img.image(src="../img/slide_position_bar.png" alt="現在のスライド表示バー")
             .shop_name
