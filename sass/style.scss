@@ -167,8 +167,8 @@ html,body {
     display: none;
     position: relative;
 
-    #section3 {
-        .slide3_1,.slide3_3,.slide3_5 {
+    #section2,#section3,#section4,#section5 {
+        .slide2_1,.slide2_3,.slide2_5,.slide3_1,.slide3_3,.slide3_5,.slide4_1,.slide4_3,.slide4_5,.slide5_1,.slide5_3,.slide5_5 {
             .back_layer {
                 position: relative;
                 height: 100%;
@@ -287,7 +287,7 @@ html,body {
 
 
 
-        .slide3_2,.slide3_4,.slide3_6 {
+        .slide2_2,.slide2_4,.slide2_6,.slide3_2,.slide3_4,.slide3_6,.slide4_2,.slide4_4,.slide4_6,.slide5_2,.slide5_4,.slide5_6 {
             .back_layer {
                 position: relative;
                 height: 100%;

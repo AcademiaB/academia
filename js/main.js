@@ -12,16 +12,20 @@ $(function(){
       },2000);
   },1000);
 
+
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
   /**********
     メニューの店舗をクリックした際の動作
   **********/
-  //  魚勝商店
-  $("#menu_page2_link").click(function(){
+  //  相生屋
+  $("#menu_page1_link").click(function(){
 
     //  この部分の書き方は「jQueryメソッドチェーン」で検索すると出てきます
     $('#menu_soogo')
       .velocity({
-        'left': "34%"
+        'left': "13%"
       },2000,'easeInOutQuart')
       .velocity({
         'bottom': "10%"
@@ -39,20 +43,133 @@ $(function(){
       .velocity({
         'opacity': 0,
         'complete': setTimeout(function(){
-          mySlilentMoveTo_menuLink2();
+          $.fn.fullpage.silentMoveTo("page_1", 0);
         },500)
       },500);
   }
 
+
+  //  魚勝商店
+  $("#menu_page2_link").click(function(){
+
+    //  この部分の書き方は「jQueryメソッドチェーン」で検索すると出てきます
+    $('#menu_soogo')
+      .velocity({
+        'left': "34%"
+      },2500,'easeInOutQuart')
+      .velocity({
+        'bottom': "10%"
+      },1000)
+      .velocity({
+        'opacity': 0,
+        'complete': setTimeout(function(){
+          mySlilentMoveTo_menuLink2();
+        },4500)
+      },1000);
+  });
+
   function mySlilentMoveTo_menuLink2(){
-    $.fn.fullpage.silentMoveTo("page_2", 0);
+    $("#section1")
+      .velocity({
+        'opacity': 0,
+        'complete': setTimeout(function(){
+          $.fn.fullpage.silentMoveTo("page_2", 0);
+        },500)
+      },500);
   }
 
 
+  //  辻喜
+  $("#menu_page3_link").click(function(){
 
+    //  この部分の書き方は「jQueryメソッドチェーン」で検索すると出てきます
+    $('#menu_soogo')
+      .velocity({
+        'left': "55%"
+      },3000,'easeInOutQuart')
+      .velocity({
+        'bottom': "10%"
+      },1000)
+      .velocity({
+        'opacity': 0,
+        'complete': setTimeout(function(){
+          mySlilentMoveTo_menuLink3();
+        },5000)
+      },1000);
+  });
+
+  function mySlilentMoveTo_menuLink3(){
+    $("#section1")
+      .velocity({
+        'opacity': 0,
+        'complete': setTimeout(function(){
+          $.fn.fullpage.silentMoveTo("page_3", 0);
+        },500)
+      },500);
+  }
+
+
+  //  藤田屋商店
+  $("#menu_page4_link").click(function(){
+
+    //  この部分の書き方は「jQueryメソッドチェーン」で検索すると出てきます
+    $('#menu_soogo')
+      .velocity({
+        'left': "76%"
+      },3500,'easeInOutQuart')
+      .velocity({
+        'bottom': "10%"
+      },1000)
+      .velocity({
+        'opacity': 0,
+        'complete': setTimeout(function(){
+          mySlilentMoveTo_menuLink4();
+        },5500)
+      },1000);
+  });
+
+  function mySlilentMoveTo_menuLink4(){
+    $("#section1")
+      .velocity({
+        'opacity': 0,
+        'complete': setTimeout(function(){
+          $.fn.fullpage.silentMoveTo("page_4", 0);
+        },500)
+      },500);
+  }
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
   /**********
     マルバツを押した際の動作
   **********/
+  //  相生屋
+  $(".quiz__choice__A #link_A_2_1").click(function (){
+    $("#slide2_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei1);
+  });
+  $(".quiz__choice__B #link_B_2_1").click(function (){
+    $("#slide2_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei1);
+  });
+
+  $(".quiz__choice__A #link_A_2_3").click(function (){
+    $("#slide2_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei3);
+  });
+  $(".quiz__choice__B #link_B_2_3").click(function (){
+    $("#slide2_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei3);
+  });
+
+  $(".quiz__choice__A #link_A_2_5").click(function (){
+    $("#slide2_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei5);
+  });
+  $(".quiz__choice__B #link_B_2_5").click(function (){
+    $("#slide2_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei5);
+  });
+
+
   //  魚勝商店
   $(".quiz__choice__A #link_A_3_1").click(function (){
     $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
@@ -75,18 +192,84 @@ $(function(){
     $("#slide3_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu5);
   });
 
+
+  //  辻喜
+  $(".quiz__choice__A #link_A_4_1").click(function (){
+    $("#slide4_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki1);
+  });
+  $(".quiz__choice__B #link_B_4_1").click(function (){
+    $("#slide4_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki1);
+  });
+
+  $(".quiz__choice__A #link_A_4_3").click(function (){
+    $("#slide4_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki3);
+  });
+  $(".quiz__choice__B #link_B_4_3").click(function (){
+    $("#slide4_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki3);
+  });
+
+  $(".quiz__choice__A #link_A_4_5").click(function (){
+    $("#slide4_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki5);
+  });
+  $(".quiz__choice__B #link_B_4_5").click(function (){
+    $("#slide4_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki5);
+  });
+
+
+  //  藤田屋商店
+  $(".quiz__choice__A #link_A_5_1").click(function (){
+    $("#slide5_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya1);
+  });
+  $(".quiz__choice__B #link_B_5_1").click(function (){
+    $("#slide5_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya1);
+  });
+
+  $(".quiz__choice__A #link_A_5_3").click(function (){
+    $("#slide5_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya3);
+  });
+  $(".quiz__choice__B #link_B_5_3").click(function (){
+    $("#slide5_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya3);
+  });
+
+  $(".quiz__choice__A #link_A_5_5").click(function (){
+    $("#slide5_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya5);
+  });
+  $(".quiz__choice__B #link_B_5_5").click(function (){
+    $("#slide5_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya5);
+  });
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
   /**********
     解説左イラストを押した際の動作
   **********/
-  //  魚勝商店
-  $("#next_quiz").click(function (){
-    //$("#slide3_2 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu2);
-    alert("aaa")
-  });
 
-  $("#slide3_4__answer #next_quiz").click(function (){
-    $("#slide3_4 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu4);
-  });
+  //  相生屋
+  //  スライド1→スライド2(1問目問題から解答へ)
+  function mySilentMoveTo_aisei1(){
+    $.fn.fullpage.silentMoveTo('page_1', 1);
+  }
+  //  スライド2→スライド3(1問目解答から2問目問題へ)
+  function mySilentMoveTo_aisei2(){
+    $.fn.fullpage.silentMoveTo('page_1', 2);
+  }
+  //  スライド3→スライド4(2問目問題から解答へ)
+  function mySilentMoveTo_aisei3(){
+    $.fn.fullpage.silentMoveTo('page_1', 3);
+  }
+  //  スライド4→スライド5(2問目解答から3問目問題へ)
+  function mySilentMoveTo_aisei4(){
+    $.fn.fullpage.silentMoveTo('page_1', 4);
+  }
+  //  スライド5→スライド6(3問目問題から解答へ)
+  function mySilentMoveTo_aisei5(){
+    $.fn.fullpage.silentMoveTo('page_1', 5);
+  }
+
 
   //  魚勝商店
   //  スライド1→スライド2(1問目問題から解答へ)
@@ -111,10 +294,75 @@ $(function(){
   }
 
 
+  //  辻喜
+  //  スライド1→スライド2(1問目問題から解答へ)
+  function mySilentMoveTo_tuziki1(){
+    $.fn.fullpage.silentMoveTo('page_3', 1);
+  }
+  //  スライド2→スライド3(1問目解答から2問目問題へ)
+  function mySilentMoveTo_tuziki2(){
+    $.fn.fullpage.silentMoveTo('page_3', 2);
+  }
+  //  スライド3→スライド4(2問目問題から解答へ)
+  function mySilentMoveTo_tuziki3(){
+    $.fn.fullpage.silentMoveTo('page_3', 3);
+  }
+  //  スライド4→スライド5(2問目解答から3問目問題へ)
+  function mySilentMoveTo_tuziki4(){
+    $.fn.fullpage.silentMoveTo('page_3', 4);
+  }
+  //  スライド5→スライド6(3問目問題から解答へ)
+  function mySilentMoveTo_tuziki5(){
+    $.fn.fullpage.silentMoveTo('page_3', 5);
+  }
+
+
+  //  藤田屋商店
+  //  スライド1→スライド2(1問目問題から解答へ)
+  function mySilentMoveTo_fuzitaya1(){
+    $.fn.fullpage.silentMoveTo('page_4', 1);
+  }
+  //  スライド2→スライド3(1問目解答から2問目問題へ)
+  function mySilentMoveTo_fuzitaya2(){
+    $.fn.fullpage.silentMoveTo('page_4', 2);
+  }
+  //  スライド3→スライド4(2問目問題から解答へ)
+  function mySilentMoveTo_fuzitaya3(){
+    $.fn.fullpage.silentMoveTo('page_4', 3);
+  }
+  //  スライド4→スライド5(2問目解答から3問目問題へ)
+  function mySilentMoveTo_fuzitaya4(){
+    $.fn.fullpage.silentMoveTo('page_4', 4);
+  }
+  //  スライド5→スライド6(3問目問題から解答へ)
+  function mySilentMoveTo_fuzitaya5(){
+    $.fn.fullpage.silentMoveTo('page_4', 5);
+  }
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
 
   /**********
   マルバツを常に上下させる
   **********/
+  //  相生屋
+  $("#slide2_1 #link_A_2_1,#link_B_2_1")
+    .velocity(
+      {marginTop: "-10px"},
+      {loop: true}
+    );
+  $("#slide2_3 #link_A_2_3,#link_B_2_3")
+    .velocity(
+      {marginTop: "-10px"},
+      {loop: true}
+    );
+  $("#slide2_5 #link_A_2_5,#link_B_2_5")
+    .velocity(
+      {marginTop: "-10px"},
+      {loop: true}
+    );
+
+  //  魚勝商店
   $("#slide3_1 #link_A_3_1,#link_B_3_1")
     .velocity(
       {marginTop: "-10px"},
@@ -130,10 +378,48 @@ $(function(){
       {marginTop: "-10px"},
       {loop: true}
     );
+
+  //  辻喜
+  $("#slide4_1 #link_A_4_1,#link_B_4_1")
+    .velocity(
+      {marginTop: "-10px"},
+      {loop: true}
+    );
+  $("#slide4_3 #link_A_4_3,#link_B_4_3")
+    .velocity(
+      {marginTop: "-10px"},
+      {loop: true}
+    );
+  $("#slide4_5 #link_A_4_5,#link_B_4_5")
+    .velocity(
+      {marginTop: "-10px"},
+      {loop: true}
+    );
+
+  //  藤田屋商店
+  $("#slide5_1 #link_A_5_1,#link_B_5_1")
+    .velocity(
+      {marginTop: "-10px"},
+      {loop: true}
+    );
+  $("#slide5_3 #link_A_5_3,#link_B_5_3")
+    .velocity(
+      {marginTop: "-10px"},
+      {loop: true}
+    );
+  $("#slide5_5 #link_A_5_5,#link_B_5_5")
+    .velocity(
+      {marginTop: "-10px"},
+      {loop: true}
+    );
 });
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 
 
 
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
 /**********
 fullpage.jsの読み込み(onload内で読んでます)
 **********/
@@ -152,7 +438,6 @@ function fullpage_load(){
 
       //  メニューから1店舗目へのリンクを押した時
       if(index == 1 && nextIndex == 2 && direction =='down'){
-        alert("メニューから1店舗目へ");
         $("#section2 .fp-tableCell").addClass("js_d_none");
         $("#slide2_1 .fp-tableCell").fadeIn(1000);
         $("#slide2_1 .fp-tableCell").removeClass("js_d_none");
@@ -168,7 +453,6 @@ function fullpage_load(){
 
       //  メニューから3店舗目へのリンクを押した時
       if(index == 1 && nextIndex == 4 && direction =='down'){
-        alert("メニューから3店舗目へ");
         $("#section4 .fp-tableCell").addClass("js_d_none");
         $("#slide4_1 .fp-tableCell").fadeIn(1000);
         $("#slide4_1 .fp-tableCell").removeClass("js_d_none");
@@ -176,7 +460,6 @@ function fullpage_load(){
 
       //  メニューから4店舗目へのリンクを押した時
       if(index == 1 && nextIndex == 5 && direction =='down'){
-        alert("メニューから4店舗目へ");
         $("#section5 .fp-tableCell").addClass("js_d_none");
         $("#slide5_1 .fp-tableCell").fadeIn(1000);
         $("#slide5_1 .fp-tableCell").removeClass("js_d_none");
@@ -190,7 +473,142 @@ function fullpage_load(){
     onSlideLeave: function( anchorLink, index, slideIndex, direction, nextSlideIndex){
       var leavingSlide = $(this);
 
-      //  以下右方向への移動に関する条件
+      /**********
+        以下右方向への移動に関する条件
+      **********/
+      //  相生屋
+      //  2つめのセクション かつ 1枚目のスライド かつ 次のスライドが2枚目 かつ 右にスライドした場合
+      if(index == 2 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
+        $("#slide2_1 .fp-tableCell").addClass("js_d_none");
+        $("#slide2_2__answer").addClass("js_d_none");
+        $("#slide2_2__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide2_2 .fp-tableCell").fadeIn(1000,gifLoad);
+        $("#slide2_1 .fp-tableCell").fadeOut(100);
+        $("#slide2_2 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide2_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide2_2__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide2_2__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide2_2__movie__gif").fadeOut(1000);
+              $("#slide2_2__incorrect_soogo").fadeOut(1000);
+              $("#slide2_2__answer").fadeIn(1000);
+            },8000);
+          });
+        }
+      }
+
+      //  2つめのセクション かつ 2枚目のスライド かつ 次のスライドが3枚目 かつ 右にスライドした場合
+      if(index == 2 && slideIndex == 1 && nextSlideIndex == 2 && direction == 'right'){
+        alert("右に移動して3枚目のスライドへ！！！");
+        $("#slide2_2 .fp-tableCell").addClass("js_d_none");
+        $("#slide2_3 .fp-tableCell").fadeIn(3000);
+        $("#slide2_2 .fp-tableCell").fadeOut(100);
+        $("#slide2_3 .fp-tableCell").removeClass("js_d_none");
+      }
+
+      //  2つめのセクション かつ 3枚目のスライド かつ 次のスライドが4枚目 かつ 右にスライドした場合
+      if(index == 2 && slideIndex == 2 && nextSlideIndex == 3 && direction == 'right'){
+        $("#slide2_3 .fp-tableCell").addClass("js_d_none");
+        $("#slide2_4__answer").addClass("js_d_none");
+        $("#slide2_4__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide2_4 .fp-tableCell").fadeIn(1000,gifLoad);
+        $("#slide2_3 .fp-tableCell").fadeOut(100);
+        $("#slide2_4 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide2_4__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide2_4__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide2_4__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide2_4__movie__gif").fadeOut(1000);
+              $("#slide2_4__incorrect_soogo").fadeOut(1000);
+              $("#slide2_4__answer").fadeIn(1000);
+            },8000);
+          });
+        }
+      }
+
+      //  2つめのセクション かつ 4枚目のスライド かつ 次のスライドが5枚目 かつ 右にスライドした場合
+      if(index == 2 && slideIndex == 3 && nextSlideIndex == 4 && direction == 'right'){
+        alert("右に移動して5枚目のスライドへ！！！");
+        $("#slide2_4 .fp-tableCell").addClass("js_d_none");
+        $("#slide2_5 .fp-tableCell").fadeIn(3000);
+        $("#slide2_4 .fp-tableCell").fadeOut(100);
+        $("#slide2_5 .fp-tableCell").removeClass("js_d_none");
+      }
+
+      //  2つめのセクション かつ 5枚目のスライド かつ 次のスライドが6枚目 かつ 右にスライドした場合
+      if(index == 2 && slideIndex == 4 && nextSlideIndex == 5 && direction == 'right'){
+        $("#slide2_5 .fp-tableCell").addClass("js_d_none");
+        $("#slide2_6__answer").addClass("js_d_none");
+        $("#slide2_6__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide2_6 .fp-tableCell").fadeIn(1000,gifLoad);
+        $("#slide2_5 .fp-tableCell").fadeOut(100);
+        $("#slide2_6 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide2_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide2_6__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide2_6__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide2_6__movie__gif").fadeOut(1000);
+              $("#slide2_6__incorrect_soogo").fadeOut(1000);
+              $("#slide2_6__answer").fadeIn(1000);
+            },8000);
+          });
+        }
+      }
+
+      //  2つめのセクション かつ 6枚目のスライド かつ 次のスライドが1枚目 かつ 右にスライドした場合
+      if(index == 2 && slideIndex == 5 && nextSlideIndex == 0 && direction == 'left'){
+        alert("右に移動して1枚目のスライドへ！！！");
+        $("#slide2_6 .fp-tableCell").addClass("js_d_none");
+        $("#slide2_1 .fp-tableCell").fadeIn(3000);
+        $("#slide2_6 .fp-tableCell").fadeOut(100);
+        $("#slide2_1 .fp-tableCell").removeClass("js_d_none");
+      }
+
+
+      /////////////////////////////////////////////////////////
+      //  魚勝商店
       //  3つめのセクション かつ 1枚目のスライド かつ 次のスライドが2枚目 かつ 右にスライドした場合
       if(index == 3 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
         $("#slide3_1 .fp-tableCell").addClass("js_d_none");
@@ -319,8 +737,274 @@ function fullpage_load(){
         $("#slide3_6 .fp-tableCell").fadeOut(100);
         $("#slide3_1 .fp-tableCell").removeClass("js_d_none");
       }
+
+
+      /////////////////////////////////////////////////////////
+      //  辻喜
+      //  4つめのセクション かつ 1枚目のスライド かつ 次のスライドが2枚目 かつ 右にスライドした場合
+      if(index == 4 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
+        $("#slide4_1 .fp-tableCell").addClass("js_d_none");
+        $("#slide4_2__answer").addClass("js_d_none");
+        $("#slide4_2__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide4_2 .fp-tableCell").fadeIn(1000,gifLoad);
+        $("#slide4_1 .fp-tableCell").fadeOut(100);
+        $("#slide4_2 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide4_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide4_2__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide4_2__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide4_2__movie__gif").fadeOut(1000);
+              $("#slide4_2__incorrect_soogo").fadeOut(1000);
+              $("#slide4_2__answer").fadeIn(1000);
+            },8000);
+          });
+        }
+      }
+
+      //  4つめのセクション かつ 2枚目のスライド かつ 次のスライドが3枚目 かつ 右にスライドした場合
+      if(index == 4 && slideIndex == 1 && nextSlideIndex == 2 && direction == 'right'){
+        alert("右に移動して3枚目のスライドへ！！！");
+        $("#slide4_2 .fp-tableCell").addClass("js_d_none");
+        $("#slide4_3 .fp-tableCell").fadeIn(3000);
+        $("#slide4_2 .fp-tableCell").fadeOut(100);
+        $("#slide4_3 .fp-tableCell").removeClass("js_d_none");
+      }
+
+      //  4つめのセクション かつ 3枚目のスライド かつ 次のスライドが4枚目 かつ 右にスライドした場合
+      if(index == 4 && slideIndex == 2 && nextSlideIndex == 3 && direction == 'right'){
+        $("#slide4_3 .fp-tableCell").addClass("js_d_none");
+        $("#slide4_4__answer").addClass("js_d_none");
+        $("#slide4_4__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide4_4 .fp-tableCell").fadeIn(1000,gifLoad);
+        $("#slide4_3 .fp-tableCell").fadeOut(100);
+        $("#slide4_4 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide4_4__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide4_4__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide4_4__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide4_4__movie__gif").fadeOut(1000);
+              $("#slide4_4__incorrect_soogo").fadeOut(1000);
+              $("#slide4_4__answer").fadeIn(1000);
+            },8000);
+          });
+        }
+      }
+
+      //  4つめのセクション かつ 4枚目のスライド かつ 次のスライドが5枚目 かつ 右にスライドした場合
+      if(index == 4 && slideIndex == 3 && nextSlideIndex == 4 && direction == 'right'){
+        alert("右に移動して5枚目のスライドへ！！！");
+        $("#slide4_4 .fp-tableCell").addClass("js_d_none");
+        $("#slide4_5 .fp-tableCell").fadeIn(3000);
+        $("#slide4_4 .fp-tableCell").fadeOut(100);
+        $("#slide4_5 .fp-tableCell").removeClass("js_d_none");
+      }
+
+      //  4つめのセクション かつ 5枚目のスライド かつ 次のスライドが6枚目 かつ 右にスライドした場合
+      if(index == 4 && slideIndex == 4 && nextSlideIndex == 5 && direction == 'right'){
+        $("#slide4_5 .fp-tableCell").addClass("js_d_none");
+        $("#slide4_6__answer").addClass("js_d_none");
+        $("#slide4_6__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide4_6 .fp-tableCell").fadeIn(1000,gifLoad);
+        $("#slide4_5 .fp-tableCell").fadeOut(100);
+        $("#slide4_6 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide4_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide4_6__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide4_6__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide4_6__movie__gif").fadeOut(1000);
+              $("#slide4_6__incorrect_soogo").fadeOut(1000);
+              $("#slide4_6__answer").fadeIn(1000);
+            },8000);
+          });
+        }
+      }
+
+      //  4つめのセクション かつ 6枚目のスライド かつ 次のスライドが1枚目 かつ 右にスライドした場合
+      if(index == 4 && slideIndex == 5 && nextSlideIndex == 0 && direction == 'left'){
+        alert("右に移動して1枚目のスライドへ！！！");
+        $("#slide4_6 .fp-tableCell").addClass("js_d_none");
+        $("#slide4_1 .fp-tableCell").fadeIn(3000);
+        $("#slide4_6 .fp-tableCell").fadeOut(100);
+        $("#slide4_1 .fp-tableCell").removeClass("js_d_none");
+      }
+
+
+      /////////////////////////////////////////////////////////
+      //  辻喜
+      //  5つめのセクション かつ 1枚目のスライド かつ 次のスライドが2枚目 かつ 右にスライドした場合
+      if(index == 5 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
+        $("#slide5_1 .fp-tableCell").addClass("js_d_none");
+        $("#slide5_2__answer").addClass("js_d_none");
+        $("#slide5_2__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide5_2 .fp-tableCell").fadeIn(1000,gifLoad);
+        $("#slide5_1 .fp-tableCell").fadeOut(100);
+        $("#slide5_2 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide5_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide5_2__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide5_2__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide5_2__movie__gif").fadeOut(1000);
+              $("#slide5_2__incorrect_soogo").fadeOut(1000);
+              $("#slide5_2__answer").fadeIn(1000);
+            },8000);
+          });
+        }
+      }
+
+      //  5つめのセクション かつ 2枚目のスライド かつ 次のスライドが3枚目 かつ 右にスライドした場合
+      if(index == 4 && slideIndex == 1 && nextSlideIndex == 2 && direction == 'right'){
+        alert("右に移動して3枚目のスライドへ！！！");
+        $("#slide5_2 .fp-tableCell").addClass("js_d_none");
+        $("#slide5_3 .fp-tableCell").fadeIn(3000);
+        $("#slide5_2 .fp-tableCell").fadeOut(100);
+        $("#slide5_3 .fp-tableCell").removeClass("js_d_none");
+      }
+
+      //  5つめのセクション かつ 3枚目のスライド かつ 次のスライドが4枚目 かつ 右にスライドした場合
+      if(index == 5 && slideIndex == 2 && nextSlideIndex == 3 && direction == 'right'){
+        $("#slide5_3 .fp-tableCell").addClass("js_d_none");
+        $("#slide5_4__answer").addClass("js_d_none");
+        $("#slide5_4__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide5_4 .fp-tableCell").fadeIn(1000,gifLoad);
+        $("#slide5_3 .fp-tableCell").fadeOut(100);
+        $("#slide5_4 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide5_4__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide5_4__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide5_4__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide5_4__movie__gif").fadeOut(1000);
+              $("#slide5_4__incorrect_soogo").fadeOut(1000);
+              $("#slide5_4__answer").fadeIn(1000);
+            },8000);
+          });
+        }
+      }
+
+      //  5つめのセクション かつ 4枚目のスライド かつ 次のスライドが5枚目 かつ 右にスライドした場合
+      if(index == 5 && slideIndex == 3 && nextSlideIndex == 4 && direction == 'right'){
+        alert("右に移動して5枚目のスライドへ！！！");
+        $("#slide5_4 .fp-tableCell").addClass("js_d_none");
+        $("#slide5_5 .fp-tableCell").fadeIn(3000);
+        $("#slide5_4 .fp-tableCell").fadeOut(100);
+        $("#slide5_5 .fp-tableCell").removeClass("js_d_none");
+      }
+
+      //  5つめのセクション かつ 5枚目のスライド かつ 次のスライドが6枚目 かつ 右にスライドした場合
+      if(index == 5 && slideIndex == 4 && nextSlideIndex == 5 && direction == 'right'){
+        $("#slide5_5 .fp-tableCell").addClass("js_d_none");
+        $("#slide5_6__answer").addClass("js_d_none");
+        $("#slide5_6__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide5_6 .fp-tableCell").fadeIn(1000,gifLoad);
+        $("#slide5_5 .fp-tableCell").fadeOut(100);
+        $("#slide5_6 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide5_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide5_6__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide5_6__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide5_6__movie__gif").fadeOut(1000);
+              $("#slide5_6__incorrect_soogo").fadeOut(1000);
+              $("#slide5_6__answer").fadeIn(1000);
+            },8000);
+          });
+        }
+      }
+
+      //  5つめのセクション かつ 6枚目のスライド かつ 次のスライドが1枚目 かつ 右にスライドした場合
+      if(index == 5 && slideIndex == 5 && nextSlideIndex == 0 && direction == 'left'){
+        alert("右に移動して1枚目のスライドへ！！！");
+        $("#slide5_6 .fp-tableCell").addClass("js_d_none");
+        $("#slide5_1 .fp-tableCell").fadeIn(3000);
+        $("#slide5_6 .fp-tableCell").fadeOut(100);
+        $("#slide5_1 .fp-tableCell").removeClass("js_d_none");
+      }
     }
   });
 
   //$('#header').fadeIn("slow");
 }
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
