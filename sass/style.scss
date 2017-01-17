@@ -123,7 +123,7 @@ html,body {
         z-index: 4;
         top: auto;
         right: 0;
-        bottom: 17%;
+        bottom: 13%;
         left: 0;
         width: 84%;
         margin: 0 8%;
@@ -168,7 +168,7 @@ html,body {
     position: relative;
 
     #section3 {
-        .slide3_1,.slide3_3 {
+        .slide3_1,.slide3_3,.slide3_5 {
             .back_layer {
                 position: relative;
                 height: 100%;
@@ -275,13 +275,13 @@ html,body {
 
 
 
-        .slide3_2 {
+        .slide3_2,.slide3_4,.slide3_6 {
             .back_layer {
                 position: relative;
                 height: 100%;
                 background-color: #FFF;
                 background-image: url("../img/quiz_back_ryuguu.png");
-                background-size: 1920px auto;
+                background-size: 100% auto;
                 background-repeat: no-repeat;
                 background-position: center;
 
@@ -321,8 +321,8 @@ html,body {
                     right: 0;
                     bottom: 0;
                     left: 0;
-                    width: 1000px;
-                    height: 700px;
+                    width: 50%;
+                    height: auto;
                     margin: auto;
 
                     .image {
@@ -331,7 +331,7 @@ html,body {
                         right: 0;
                         bottom: 0;
                         left: 0;
-                        width: 900px;
+                        width: 100%;
                         height: auto;
                         margin: auto;
                     }
@@ -342,52 +342,56 @@ html,body {
                     z-index: 4;
                     top: auto;
                     right: 0;
-                    bottom: 120px;
+                    bottom: 16%;
                     left: 0;
-                    width: 1000px;
-                    height: 600px;
+                    width: 50%;
+                    height: auto;
                     margin: auto;
 
                     &__illust {
-                        position: relative;
-                        width: 400px;
+                        width: 40%;
+                        height: auto;
                         float: left;
 
-                        .image {
-                            position: absolute;
-                            top: 0;
-                            right: 0;
-                            bottom: 0;
-                            left: 0;
-                            width: 400px;
-                            height: auto;
-                            margin: auto;
+                        .link{
+                            display: block;
+
+                            .image {
+                                width: 100%;
+                                height: auto;
+                                margin: 50px 0 0 0;
+                            }
                         }
                     }
 
                     &__sentence {
-                        width: 500px;
+                        width: 50%;
                         text-align: center;
                         float: right;
 
                         .image {
-                            width: 500px;
+                            width: 100%;
                             height: auto;
                         }
                     }
 
                     &__illust,&__sentence {
-                        height: 100%;
+                        height: auto;
                     }
                 }//  .answer
 
                 .slide_position_bar {
                     position: absolute;
                     top: auto;
-                    bottom: 50px;
+                    bottom: 8%;
                     width: 100%;
                     margin: auto;
                     text-align: center;
+
+                    .image {
+                        width: 60%;
+                        height: auto;
+                    }
                 }
             }//  .back_layer
         }//  .slide3_2
@@ -400,7 +404,7 @@ html,body {
 **********/
 .shop_name {
     position: absolute;
-    top: 15%;
+    top: 9%;
     right: 0;
     left: 0;
 

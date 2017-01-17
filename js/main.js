@@ -54,16 +54,60 @@ $(function(){
     マルバツを押した際の動作
   **********/
   //  魚勝商店
-  $(".quiz__choice__A #link_A").click(function (){
+  $(".quiz__choice__A #link_A_3_1").click(function (){
     $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
   });
-  $(".quiz__choice__B #link_B").click(function (){
+  $(".quiz__choice__B #link_B_3_1").click(function (){
     $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
   });
 
-  //  魚勝商店スライド1→スライド2
+  $(".quiz__choice__A #link_A_3_3").click(function (){
+    $("#slide3_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu3);
+  });
+  $(".quiz__choice__B #link_B_3_3").click(function (){
+    $("#slide3_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu3);
+  });
+
+  $(".quiz__choice__A #link_A_3_5").click(function (){
+    $("#slide3_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu5);
+  });
+  $(".quiz__choice__B #link_B_3_5").click(function (){
+    $("#slide3_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu5);
+  });
+
+  /**********
+    解説左イラストを押した際の動作
+  **********/
+  //  魚勝商店
+  $("#next_quiz").click(function (){
+    //$("#slide3_2 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu2);
+    alert("aaa")
+  });
+
+  $("#slide3_4__answer #next_quiz").click(function (){
+    $("#slide3_4 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu4);
+  });
+
+  //  魚勝商店
+  //  スライド1→スライド2(1問目問題から解答へ)
   function mySilentMoveTo_uokatu1(){
     $.fn.fullpage.silentMoveTo('page_2', 1);
+  }
+  //  スライド2→スライド3(1問目解答から2問目問題へ)
+  function mySilentMoveTo_uokatu2(){
+    $.fn.fullpage.silentMoveTo('page_2', 2);
+  }
+  //  スライド3→スライド4(2問目問題から解答へ)
+  function mySilentMoveTo_uokatu3(){
+    $.fn.fullpage.silentMoveTo('page_2', 3);
+  }
+  //  スライド4→スライド5(2問目解答から3問目問題へ)
+  function mySilentMoveTo_uokatu4(){
+    $.fn.fullpage.silentMoveTo('page_2', 4);
+  }
+  //  スライド5→スライド6(3問目問題から解答へ)
+  function mySilentMoveTo_uokatu5(){
+    $.fn.fullpage.silentMoveTo('page_2', 5);
   }
 
 
@@ -71,9 +115,19 @@ $(function(){
   /**********
   マルバツを常に上下させる
   **********/
-  $("#slide3_1 #link_A,#link_B")
+  $("#slide3_1 #link_A_3_1,#link_B_3_1")
     .velocity(
-      {marginTop: "-5px"},
+      {marginTop: "-10px"},
+      {loop: true}
+    );
+  $("#slide3_3 #link_A_3_3,#link_B_3_3")
+    .velocity(
+      {marginTop: "-10px"},
+      {loop: true}
+    );
+  $("#slide3_5 #link_A_3_5,#link_B_3_5")
+    .velocity(
+      {marginTop: "-10px"},
       {loop: true}
     );
 });
@@ -182,11 +236,36 @@ function fullpage_load(){
 
       //  3つめのセクション かつ 3枚目のスライド かつ 次のスライドが4枚目 かつ 右にスライドした場合
       if(index == 3 && slideIndex == 2 && nextSlideIndex == 3 && direction == 'right'){
-        alert("右に移動して4枚目のスライドへ！！！");
         $("#slide3_3 .fp-tableCell").addClass("js_d_none");
-        $("#slide3_4 .fp-tableCell").fadeIn(3000);
+        $("#slide3_4__answer").addClass("js_d_none");
+        $("#slide3_4__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide3_4 .fp-tableCell").fadeIn(1000,gifLoad);
         $("#slide3_3 .fp-tableCell").fadeOut(100);
         $("#slide3_4 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide3_4__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide3_4__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide3_4__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide3_4__movie__gif").fadeOut(1000);
+              $("#slide3_4__incorrect_soogo").fadeOut(1000);
+              $("#slide3_4__answer").fadeIn(1000);
+            },8000);
+          });
+        }
       }
 
       //  3つめのセクション かつ 4枚目のスライド かつ 次のスライドが5枚目 かつ 右にスライドした場合
@@ -198,12 +277,46 @@ function fullpage_load(){
         $("#slide3_5 .fp-tableCell").removeClass("js_d_none");
       }
 
-      //  3つめのセクション かつ 5枚目のスライド かつ 次のスライドが1枚目 かつ 右にスライドした場合
-      if(index == 3 && slideIndex == 4 && nextSlideIndex == 0 && direction == 'left'){
-        alert("右に移動して1枚目のスライドへ！！！");
+      //  3つめのセクション かつ 5枚目のスライド かつ 次のスライドが6枚目 かつ 右にスライドした場合
+      if(index == 3 && slideIndex == 2 && nextSlideIndex == 3 && direction == 'right'){
         $("#slide3_5 .fp-tableCell").addClass("js_d_none");
-        $("#slide3_1 .fp-tableCell").fadeIn(3000);
+        $("#slide3_6__answer").addClass("js_d_none");
+        $("#slide3_6__incorrect_soogo").addClass("js_d_none");
+
+        //  フェードインが終了後gifLoad()を呼び出し
+        $("#slide3_6 .fp-tableCell").fadeIn(1000,gifLoad);
         $("#slide3_5 .fp-tableCell").fadeOut(100);
+        $("#slide3_6 .fp-tableCell").removeClass("js_d_none");
+
+        //  gif画像のロード
+        function gifLoad(){
+          $("#slide3_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+
+          //  gif画像が配置されたら開始
+          $("#slide3_6__movie__gif .image").ready(function() {
+
+            //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
+            setTimeout(function(){
+              $("#slide3_6__incorrect_soogo").fadeIn(1000);
+            },4000);
+
+            //  1500の部分をgif画像の長さに変更
+            //  gif画像の再生が終了したらフェードアウト
+            setTimeout(function(){
+              $("#slide3_6__movie__gif").fadeOut(1000);
+              $("#slide3_6__incorrect_soogo").fadeOut(1000);
+              $("#slide3_6__answer").fadeIn(1000);
+            },8000);
+          });
+        }
+      }
+
+      //  3つめのセクション かつ 6枚目のスライド かつ 次のスライドが1枚目 かつ 右にスライドした場合
+      if(index == 3 && slideIndex == 5 && nextSlideIndex == 0 && direction == 'left'){
+        alert("右に移動して1枚目のスライドへ！！！");
+        $("#slide3_6 .fp-tableCell").addClass("js_d_none");
+        $("#slide3_1 .fp-tableCell").fadeIn(3000);
+        $("#slide3_6 .fp-tableCell").fadeOut(100);
         $("#slide3_1 .fp-tableCell").removeClass("js_d_none");
       }
     }
