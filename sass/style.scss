@@ -7,9 +7,15 @@
 @import "mixin";
 @import "js-utility";
 
+@font-face {
+    font-family: '03スマートフォントUI';
+    src: url('../font/03スマートフォントUI.woff') format('woff'),
+    url('../font/03スマートフォントUI.otf') format('opentype');
+}
 
 
 html,body {
+    font-family: '03スマートフォントUI','游ゴシック', YuGothic,'ヒラギノ角ゴ ProN W3','Hiragino Kaku Gothic ProN', 'メイリオ',Meiryo, sans-serif;
     height: 100%;
 }
 
