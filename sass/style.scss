@@ -230,6 +230,7 @@ html,body {
 
                             .two_column {
                                 line-height: 1.8;
+                                text-align: center;
                             }
                         }//  .question
                     }//  .quiz__word
@@ -326,14 +327,14 @@ html,body {
                     }
                 }//  .movie
 
-                .incorrect_soogo {
+                .soogo {
                     position: absolute;
                     z-index: 6;
                     top: 0;
                     right: 0;
                     bottom: 0;
                     left: 0;
-                    width: 50%;
+                    width: 60%;
                     height: auto;
                     margin: auto;
 

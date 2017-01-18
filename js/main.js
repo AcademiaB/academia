@@ -14,10 +14,12 @@ $(function(){
 
 
 
+
+
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
   /**********
-    メニューの店舗をクリックした際の動作
+    ----------メニューの店舗をクリックした際の動作----------
   **********/
   //  相生屋
   $("#menu_page1_link").click(function(){
@@ -142,27 +144,38 @@ $(function(){
 
 
 
+
+
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
   /**********
-    マルバツを押した際の動作
+    ----------マルバツを押した際の動作----------
+
+    ・デフォルトで不正解のそーごちゃんを表示
+    ・正解と異なる選択をした際にimgタグのsrcを書き換える
   **********/
   //  相生屋
+  //  1問目:×
   $(".quiz__choice__A #link_A_2_1").click(function (){
     $("#slide2_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei1);
   });
   $(".quiz__choice__B #link_B_2_1").click(function (){
+    $("#slide2_2__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide2_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei1);
   });
 
+  //  2問目:×
   $(".quiz__choice__A #link_A_2_3").click(function (){
     $("#slide2_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei3);
   });
   $(".quiz__choice__B #link_B_2_3").click(function (){
+    $("#slide2_4__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide2_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei3);
   });
 
+  //  3問目:○
   $(".quiz__choice__A #link_A_2_5").click(function (){
+    $("#slide2_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide2_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei5);
   });
   $(".quiz__choice__B #link_B_2_5").click(function (){
@@ -171,44 +184,56 @@ $(function(){
 
 
   //  魚勝商店
+  //  1問目:○
   $(".quiz__choice__A #link_A_3_1").click(function (){
+    $("#slide3_2__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
   });
   $(".quiz__choice__B #link_B_3_1").click(function (){
     $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
   });
 
+  //  2問目:×
   $(".quiz__choice__A #link_A_3_3").click(function (){
     $("#slide3_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu3);
   });
   $(".quiz__choice__B #link_B_3_3").click(function (){
+    $("#slide3_4__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide3_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu3);
   });
 
+  //  3問目:×
   $(".quiz__choice__A #link_A_3_5").click(function (){
     $("#slide3_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu5);
   });
   $(".quiz__choice__B #link_B_3_5").click(function (){
+    $("#slide3_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide3_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu5);
   });
 
 
   //  辻喜
+  //  1問目:○
   $(".quiz__choice__A #link_A_4_1").click(function (){
+    $("#slide4_2__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide4_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki1);
   });
   $(".quiz__choice__B #link_B_4_1").click(function (){
     $("#slide4_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki1);
   });
 
+  //  2問目:×
   $(".quiz__choice__A #link_A_4_3").click(function (){
     $("#slide4_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki3);
   });
   $(".quiz__choice__B #link_B_4_3").click(function (){
+    $("#slide4_4__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide4_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki3);
   });
 
+  //  3問目:○
   $(".quiz__choice__A #link_A_4_5").click(function (){
+    $("#slide4_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide4_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki5);
   });
   $(".quiz__choice__B #link_B_4_5").click(function (){
@@ -217,21 +242,27 @@ $(function(){
 
 
   //  藤田屋商店
+  //  1問目:×
   $(".quiz__choice__A #link_A_5_1").click(function (){
     $("#slide5_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya1);
   });
   $(".quiz__choice__B #link_B_5_1").click(function (){
+    $("#slide5_2__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide5_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya1);
   });
 
+  //  2問目:×
   $(".quiz__choice__A #link_A_5_3").click(function (){
     $("#slide5_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya3);
   });
   $(".quiz__choice__B #link_B_5_3").click(function (){
+    $("#slide5_4__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide5_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya3);
   });
 
+  //  3問目:○
   $(".quiz__choice__A #link_A_5_5").click(function (){
+    $("#slide5_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide5_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya5);
   });
   $(".quiz__choice__B #link_B_5_5").click(function (){
@@ -242,10 +273,12 @@ $(function(){
 
 
 
+
+
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
   /**********
-    解説左イラストを押した際の動作
+    ----------解説左イラストを押した際の動作----------
   **********/
 
   //  相生屋
@@ -342,8 +375,13 @@ $(function(){
 /////////////////////////////////////////////////////////
 
 
+
+
+
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
   /**********
-  マルバツを常に上下させる
+    ----------マルバツを常に上下させる----------
   **********/
   //  相生屋
   $("#slide2_1 #link_A_2_1,#link_B_2_1")
@@ -418,10 +456,12 @@ $(function(){
 
 
 
+
+
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 /**********
-fullpage.jsの読み込み(onload内で読んでます)
+  ----------fullpage.jsの読み込み(onload内で読んでます)----------
 **********/
 function fullpage_load(){
   $('#fullpage').fadeIn("slow");
@@ -474,14 +514,14 @@ function fullpage_load(){
       var leavingSlide = $(this);
 
       /**********
-        以下右方向への移動に関する条件
+        ----------以下右方向への移動に関する条件----------
       **********/
       //  相生屋
       //  2つめのセクション かつ 1枚目のスライド かつ 次のスライドが2枚目 かつ 右にスライドした場合
       if(index == 2 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
         $("#slide2_1 .fp-tableCell").addClass("js_d_none");
         $("#slide2_2__answer").addClass("js_d_none");
-        $("#slide2_2__incorrect_soogo").addClass("js_d_none");
+        $("#slide2_2__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide2_2 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -497,14 +537,14 @@ function fullpage_load(){
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide2_2__incorrect_soogo").fadeIn(1000);
+              $("#slide2_2__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide2_2__movie__gif").fadeOut(1000);
-              $("#slide2_2__incorrect_soogo").fadeOut(1000);
+              $("#slide2_2__soogo").fadeOut(1000);
               $("#slide2_2__answer").fadeIn(1000);
             },8000);
           });
@@ -513,7 +553,6 @@ function fullpage_load(){
 
       //  2つめのセクション かつ 2枚目のスライド かつ 次のスライドが3枚目 かつ 右にスライドした場合
       if(index == 2 && slideIndex == 1 && nextSlideIndex == 2 && direction == 'right'){
-        alert("右に移動して3枚目のスライドへ！！！");
         $("#slide2_2 .fp-tableCell").addClass("js_d_none");
         $("#slide2_3 .fp-tableCell").fadeIn(3000);
         $("#slide2_2 .fp-tableCell").fadeOut(100);
@@ -524,7 +563,7 @@ function fullpage_load(){
       if(index == 2 && slideIndex == 2 && nextSlideIndex == 3 && direction == 'right'){
         $("#slide2_3 .fp-tableCell").addClass("js_d_none");
         $("#slide2_4__answer").addClass("js_d_none");
-        $("#slide2_4__incorrect_soogo").addClass("js_d_none");
+        $("#slide2_4__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide2_4 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -540,14 +579,14 @@ function fullpage_load(){
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide2_4__incorrect_soogo").fadeIn(1000);
+              $("#slide2_4__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide2_4__movie__gif").fadeOut(1000);
-              $("#slide2_4__incorrect_soogo").fadeOut(1000);
+              $("#slide2_4__soogo").fadeOut(1000);
               $("#slide2_4__answer").fadeIn(1000);
             },8000);
           });
@@ -556,7 +595,6 @@ function fullpage_load(){
 
       //  2つめのセクション かつ 4枚目のスライド かつ 次のスライドが5枚目 かつ 右にスライドした場合
       if(index == 2 && slideIndex == 3 && nextSlideIndex == 4 && direction == 'right'){
-        alert("右に移動して5枚目のスライドへ！！！");
         $("#slide2_4 .fp-tableCell").addClass("js_d_none");
         $("#slide2_5 .fp-tableCell").fadeIn(3000);
         $("#slide2_4 .fp-tableCell").fadeOut(100);
@@ -567,7 +605,7 @@ function fullpage_load(){
       if(index == 2 && slideIndex == 4 && nextSlideIndex == 5 && direction == 'right'){
         $("#slide2_5 .fp-tableCell").addClass("js_d_none");
         $("#slide2_6__answer").addClass("js_d_none");
-        $("#slide2_6__incorrect_soogo").addClass("js_d_none");
+        $("#slide2_6__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide2_6 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -576,21 +614,21 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide2_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide2_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
 
           //  gif画像が配置されたら開始
           $("#slide2_6__movie__gif .image").ready(function() {
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide2_6__incorrect_soogo").fadeIn(1000);
+              $("#slide2_6__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide2_6__movie__gif").fadeOut(1000);
-              $("#slide2_6__incorrect_soogo").fadeOut(1000);
+              $("#slide2_6__soogo").fadeOut(1000);
               $("#slide2_6__answer").fadeIn(1000);
             },8000);
           });
@@ -599,12 +637,13 @@ function fullpage_load(){
 
       //  2つめのセクション かつ 6枚目のスライド かつ 次のスライドが1枚目 かつ 右にスライドした場合
       if(index == 2 && slideIndex == 5 && nextSlideIndex == 0 && direction == 'left'){
-        alert("右に移動して1枚目のスライドへ！！！");
         $("#slide2_6 .fp-tableCell").addClass("js_d_none");
         $("#slide2_1 .fp-tableCell").fadeIn(3000);
         $("#slide2_6 .fp-tableCell").fadeOut(100);
         $("#slide2_1 .fp-tableCell").removeClass("js_d_none");
       }
+      /////////////////////////////////////////////////////////
+
 
 
       /////////////////////////////////////////////////////////
@@ -613,7 +652,7 @@ function fullpage_load(){
       if(index == 3 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
         $("#slide3_1 .fp-tableCell").addClass("js_d_none");
         $("#slide3_2__answer").addClass("js_d_none");
-        $("#slide3_2__incorrect_soogo").addClass("js_d_none");
+        $("#slide3_2__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide3_2 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -622,21 +661,21 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide3_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide3_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
 
           //  gif画像が配置されたら開始
           $("#slide3_2__movie__gif .image").ready(function() {
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide3_2__incorrect_soogo").fadeIn(1000);
+              $("#slide3_2__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide3_2__movie__gif").fadeOut(1000);
-              $("#slide3_2__incorrect_soogo").fadeOut(1000);
+              $("#slide3_2__soogo").fadeOut(1000);
               $("#slide3_2__answer").fadeIn(1000);
             },8000);
           });
@@ -645,7 +684,6 @@ function fullpage_load(){
 
       //  3つめのセクション かつ 2枚目のスライド かつ 次のスライドが3枚目 かつ 右にスライドした場合
       if(index == 3 && slideIndex == 1 && nextSlideIndex == 2 && direction == 'right'){
-        alert("右に移動して3枚目のスライドへ！！！");
         $("#slide3_2 .fp-tableCell").addClass("js_d_none");
         $("#slide3_3 .fp-tableCell").fadeIn(3000);
         $("#slide3_2 .fp-tableCell").fadeOut(100);
@@ -656,7 +694,7 @@ function fullpage_load(){
       if(index == 3 && slideIndex == 2 && nextSlideIndex == 3 && direction == 'right'){
         $("#slide3_3 .fp-tableCell").addClass("js_d_none");
         $("#slide3_4__answer").addClass("js_d_none");
-        $("#slide3_4__incorrect_soogo").addClass("js_d_none");
+        $("#slide3_4__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide3_4 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -672,14 +710,14 @@ function fullpage_load(){
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide3_4__incorrect_soogo").fadeIn(1000);
+              $("#slide3_4__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide3_4__movie__gif").fadeOut(1000);
-              $("#slide3_4__incorrect_soogo").fadeOut(1000);
+              $("#slide3_4__soogo").fadeOut(1000);
               $("#slide3_4__answer").fadeIn(1000);
             },8000);
           });
@@ -688,7 +726,6 @@ function fullpage_load(){
 
       //  3つめのセクション かつ 4枚目のスライド かつ 次のスライドが5枚目 かつ 右にスライドした場合
       if(index == 3 && slideIndex == 3 && nextSlideIndex == 4 && direction == 'right'){
-        alert("右に移動して5枚目のスライドへ！！！");
         $("#slide3_4 .fp-tableCell").addClass("js_d_none");
         $("#slide3_5 .fp-tableCell").fadeIn(3000);
         $("#slide3_4 .fp-tableCell").fadeOut(100);
@@ -699,7 +736,7 @@ function fullpage_load(){
       if(index == 3 && slideIndex == 4 && nextSlideIndex == 5 && direction == 'right'){
         $("#slide3_5 .fp-tableCell").addClass("js_d_none");
         $("#slide3_6__answer").addClass("js_d_none");
-        $("#slide3_6__incorrect_soogo").addClass("js_d_none");
+        $("#slide3_6__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide3_6 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -715,14 +752,14 @@ function fullpage_load(){
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide3_6__incorrect_soogo").fadeIn(1000);
+              $("#slide3_6__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide3_6__movie__gif").fadeOut(1000);
-              $("#slide3_6__incorrect_soogo").fadeOut(1000);
+              $("#slide3_6__soogo").fadeOut(1000);
               $("#slide3_6__answer").fadeIn(1000);
             },8000);
           });
@@ -731,12 +768,13 @@ function fullpage_load(){
 
       //  3つめのセクション かつ 6枚目のスライド かつ 次のスライドが1枚目 かつ 右にスライドした場合
       if(index == 3 && slideIndex == 5 && nextSlideIndex == 0 && direction == 'left'){
-        alert("右に移動して1枚目のスライドへ！！！");
         $("#slide3_6 .fp-tableCell").addClass("js_d_none");
         $("#slide3_1 .fp-tableCell").fadeIn(3000);
         $("#slide3_6 .fp-tableCell").fadeOut(100);
         $("#slide3_1 .fp-tableCell").removeClass("js_d_none");
       }
+      /////////////////////////////////////////////////////////
+
 
 
       /////////////////////////////////////////////////////////
@@ -745,7 +783,7 @@ function fullpage_load(){
       if(index == 4 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
         $("#slide4_1 .fp-tableCell").addClass("js_d_none");
         $("#slide4_2__answer").addClass("js_d_none");
-        $("#slide4_2__incorrect_soogo").addClass("js_d_none");
+        $("#slide4_2__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide4_2 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -754,21 +792,21 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide4_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide4_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
 
           //  gif画像が配置されたら開始
           $("#slide4_2__movie__gif .image").ready(function() {
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide4_2__incorrect_soogo").fadeIn(1000);
+              $("#slide4_2__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide4_2__movie__gif").fadeOut(1000);
-              $("#slide4_2__incorrect_soogo").fadeOut(1000);
+              $("#slide4_2__soogo").fadeOut(1000);
               $("#slide4_2__answer").fadeIn(1000);
             },8000);
           });
@@ -777,7 +815,6 @@ function fullpage_load(){
 
       //  4つめのセクション かつ 2枚目のスライド かつ 次のスライドが3枚目 かつ 右にスライドした場合
       if(index == 4 && slideIndex == 1 && nextSlideIndex == 2 && direction == 'right'){
-        alert("右に移動して3枚目のスライドへ！！！");
         $("#slide4_2 .fp-tableCell").addClass("js_d_none");
         $("#slide4_3 .fp-tableCell").fadeIn(3000);
         $("#slide4_2 .fp-tableCell").fadeOut(100);
@@ -788,7 +825,7 @@ function fullpage_load(){
       if(index == 4 && slideIndex == 2 && nextSlideIndex == 3 && direction == 'right'){
         $("#slide4_3 .fp-tableCell").addClass("js_d_none");
         $("#slide4_4__answer").addClass("js_d_none");
-        $("#slide4_4__incorrect_soogo").addClass("js_d_none");
+        $("#slide4_4__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide4_4 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -804,14 +841,14 @@ function fullpage_load(){
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide4_4__incorrect_soogo").fadeIn(1000);
+              $("#slide4_4__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide4_4__movie__gif").fadeOut(1000);
-              $("#slide4_4__incorrect_soogo").fadeOut(1000);
+              $("#slide4_4__soogo").fadeOut(1000);
               $("#slide4_4__answer").fadeIn(1000);
             },8000);
           });
@@ -820,7 +857,6 @@ function fullpage_load(){
 
       //  4つめのセクション かつ 4枚目のスライド かつ 次のスライドが5枚目 かつ 右にスライドした場合
       if(index == 4 && slideIndex == 3 && nextSlideIndex == 4 && direction == 'right'){
-        alert("右に移動して5枚目のスライドへ！！！");
         $("#slide4_4 .fp-tableCell").addClass("js_d_none");
         $("#slide4_5 .fp-tableCell").fadeIn(3000);
         $("#slide4_4 .fp-tableCell").fadeOut(100);
@@ -831,7 +867,7 @@ function fullpage_load(){
       if(index == 4 && slideIndex == 4 && nextSlideIndex == 5 && direction == 'right'){
         $("#slide4_5 .fp-tableCell").addClass("js_d_none");
         $("#slide4_6__answer").addClass("js_d_none");
-        $("#slide4_6__incorrect_soogo").addClass("js_d_none");
+        $("#slide4_6__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide4_6 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -840,21 +876,21 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide4_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide4_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
 
           //  gif画像が配置されたら開始
           $("#slide4_6__movie__gif .image").ready(function() {
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide4_6__incorrect_soogo").fadeIn(1000);
+              $("#slide4_6__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide4_6__movie__gif").fadeOut(1000);
-              $("#slide4_6__incorrect_soogo").fadeOut(1000);
+              $("#slide4_6__soogo").fadeOut(1000);
               $("#slide4_6__answer").fadeIn(1000);
             },8000);
           });
@@ -863,21 +899,22 @@ function fullpage_load(){
 
       //  4つめのセクション かつ 6枚目のスライド かつ 次のスライドが1枚目 かつ 右にスライドした場合
       if(index == 4 && slideIndex == 5 && nextSlideIndex == 0 && direction == 'left'){
-        alert("右に移動して1枚目のスライドへ！！！");
         $("#slide4_6 .fp-tableCell").addClass("js_d_none");
         $("#slide4_1 .fp-tableCell").fadeIn(3000);
         $("#slide4_6 .fp-tableCell").fadeOut(100);
         $("#slide4_1 .fp-tableCell").removeClass("js_d_none");
       }
+      /////////////////////////////////////////////////////////
+
 
 
       /////////////////////////////////////////////////////////
-      //  辻喜
+      //  藤田屋
       //  5つめのセクション かつ 1枚目のスライド かつ 次のスライドが2枚目 かつ 右にスライドした場合
       if(index == 5 && slideIndex == 0 && nextSlideIndex == 1 && direction == 'right'){
         $("#slide5_1 .fp-tableCell").addClass("js_d_none");
         $("#slide5_2__answer").addClass("js_d_none");
-        $("#slide5_2__incorrect_soogo").addClass("js_d_none");
+        $("#slide5_2__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide5_2 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -893,14 +930,14 @@ function fullpage_load(){
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide5_2__incorrect_soogo").fadeIn(1000);
+              $("#slide5_2__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide5_2__movie__gif").fadeOut(1000);
-              $("#slide5_2__incorrect_soogo").fadeOut(1000);
+              $("#slide5_2__soogo").fadeOut(1000);
               $("#slide5_2__answer").fadeIn(1000);
             },8000);
           });
@@ -908,8 +945,7 @@ function fullpage_load(){
       }
 
       //  5つめのセクション かつ 2枚目のスライド かつ 次のスライドが3枚目 かつ 右にスライドした場合
-      if(index == 4 && slideIndex == 1 && nextSlideIndex == 2 && direction == 'right'){
-        alert("右に移動して3枚目のスライドへ！！！");
+      if(index == 5 && slideIndex == 1 && nextSlideIndex == 2 && direction == 'right'){
         $("#slide5_2 .fp-tableCell").addClass("js_d_none");
         $("#slide5_3 .fp-tableCell").fadeIn(3000);
         $("#slide5_2 .fp-tableCell").fadeOut(100);
@@ -920,7 +956,7 @@ function fullpage_load(){
       if(index == 5 && slideIndex == 2 && nextSlideIndex == 3 && direction == 'right'){
         $("#slide5_3 .fp-tableCell").addClass("js_d_none");
         $("#slide5_4__answer").addClass("js_d_none");
-        $("#slide5_4__incorrect_soogo").addClass("js_d_none");
+        $("#slide5_4__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide5_4 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -936,14 +972,14 @@ function fullpage_load(){
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide5_4__incorrect_soogo").fadeIn(1000);
+              $("#slide5_4__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide5_4__movie__gif").fadeOut(1000);
-              $("#slide5_4__incorrect_soogo").fadeOut(1000);
+              $("#slide5_4__soogo").fadeOut(1000);
               $("#slide5_4__answer").fadeIn(1000);
             },8000);
           });
@@ -952,7 +988,6 @@ function fullpage_load(){
 
       //  5つめのセクション かつ 4枚目のスライド かつ 次のスライドが5枚目 かつ 右にスライドした場合
       if(index == 5 && slideIndex == 3 && nextSlideIndex == 4 && direction == 'right'){
-        alert("右に移動して5枚目のスライドへ！！！");
         $("#slide5_4 .fp-tableCell").addClass("js_d_none");
         $("#slide5_5 .fp-tableCell").fadeIn(3000);
         $("#slide5_4 .fp-tableCell").fadeOut(100);
@@ -963,7 +998,7 @@ function fullpage_load(){
       if(index == 5 && slideIndex == 4 && nextSlideIndex == 5 && direction == 'right'){
         $("#slide5_5 .fp-tableCell").addClass("js_d_none");
         $("#slide5_6__answer").addClass("js_d_none");
-        $("#slide5_6__incorrect_soogo").addClass("js_d_none");
+        $("#slide5_6__soogo").addClass("js_d_none");
 
         //  フェードインが終了後gifLoad()を呼び出し
         $("#slide5_6 .fp-tableCell").fadeIn(1000,gifLoad);
@@ -972,21 +1007,21 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide5_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide5_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
 
           //  gif画像が配置されたら開始
           $("#slide5_6__movie__gif .image").ready(function() {
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
-              $("#slide5_6__incorrect_soogo").fadeIn(1000);
+              $("#slide5_6__soogo").fadeIn(1000);
             },4000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
               $("#slide5_6__movie__gif").fadeOut(1000);
-              $("#slide5_6__incorrect_soogo").fadeOut(1000);
+              $("#slide5_6__soogo").fadeOut(1000);
               $("#slide5_6__answer").fadeIn(1000);
             },8000);
           });
@@ -995,7 +1030,6 @@ function fullpage_load(){
 
       //  5つめのセクション かつ 6枚目のスライド かつ 次のスライドが1枚目 かつ 右にスライドした場合
       if(index == 5 && slideIndex == 5 && nextSlideIndex == 0 && direction == 'left'){
-        alert("右に移動して1枚目のスライドへ！！！");
         $("#slide5_6 .fp-tableCell").addClass("js_d_none");
         $("#slide5_1 .fp-tableCell").fadeIn(3000);
         $("#slide5_6 .fp-tableCell").fadeOut(100);
