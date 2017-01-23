@@ -601,23 +601,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide2_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide2_2__movie__mp4").append('<video id="2_2_movie" class="video" controls><source src="../video/marubatu_movie01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide2_2__movie__gif .image").ready(function() {
+          $("#slide2_2__movie__mp4 .video").ready(function() {
+
+            var video = $("#2_2_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide2_2__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide2_2__movie__gif").fadeOut(1000);
+              $("#slide2_2__movie__mp4").fadeOut(1000);
               $("#slide2_2__soogo").fadeOut(1000);
               $("#slide2_2__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }
