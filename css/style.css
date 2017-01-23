@@ -51,6 +51,9 @@ html, body {
             background-color: #ff386c;
             color: #F5F5F5; }
 
+#section1 {
+  opacity: 1 !important; }
+
 .top_menu {
   position: relative;
   height: 100%; }
