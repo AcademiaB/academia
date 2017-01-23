@@ -10,9 +10,32 @@ $(function(){
       .velocity({
         opacity: 1
       },2000);
+
+    //  エンディング用の右マグロ(仮)
+    if(window.localStorage.getItem('store1') == 1 & window.localStorage.getItem('store2') == 1 & window.localStorage.getItem('store3') == 1 & window.localStorage.getItem('store4') == 1){
+      $('#menu_maguro_right')
+        .velocity({
+          'right': "5%"
+        },4000);
+    }
+
+    //  エンディング用の左マグロ(仮)
+    if(window.localStorage.getItem('store1') == 0 || window.localStorage.getItem('store2') == 0 || window.localStorage.getItem('store3') == 0 || window.localStorage.getItem('store4') == 0){
+      $('#menu_maguro_left')
+        .velocity({
+          'left': "5%"
+        },4000);
+    }
   },1000);
 
-
+  $("#menu_logo").click(function(){
+    alert("aaa")
+    //  localstorageに保存
+    //  各店舗の最終問題をクリア(○か×)すると値を1にする
+    for(var i=1; i<5; i++){
+      window.localStorage.setItem('store'+i,1);
+    }
+  });
 
 
 
@@ -175,10 +198,16 @@ $(function(){
 
   //  3問目:○
   $(".quiz__choice__A #link_A_2_5").click(function (){
+    //  cookieのセット
+    window.localStorage.setItem('store1',1);
+    alert(window.localStorage.getItem('store1'));
     $("#slide2_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide2_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei5);
   });
   $(".quiz__choice__B #link_B_2_5").click(function (){
+  //  cookieのセット
+    window.localStorage.setItem('store1',1);
+    alert(window.localStorage.getItem('store1'));
     $("#slide2_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei5);
   });
 
@@ -204,9 +233,15 @@ $(function(){
 
   //  3問目:×
   $(".quiz__choice__A #link_A_3_5").click(function (){
+    //  cookieのセット
+    window.localStorage.setItem('store2',1);
+    alert(window.localStorage.getItem('store2'));
     $("#slide3_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu5);
   });
   $(".quiz__choice__B #link_B_3_5").click(function (){
+    //  cookieのセット
+    window.localStorage.setItem('store2',1);
+    alert(window.localStorage.getItem('store2'));
     $("#slide3_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide3_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu5);
   });
@@ -233,6 +268,9 @@ $(function(){
 
   //  3問目:○
   $(".quiz__choice__A #link_A_4_5").click(function (){
+    //  cookieのセット
+    window.localStorage.setItem('store3',1);
+    alert(window.localStorage.getItem('store3'));
     $("#slide4_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide4_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki5);
   });
@@ -262,10 +300,16 @@ $(function(){
 
   //  3問目:○
   $(".quiz__choice__A #link_A_5_5").click(function (){
+    //  cookieのセット
+    window.localStorage.setItem('store4',1);
+    alert(window.localStorage.getItem('store4'));
     $("#slide5_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide5_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya5);
   });
   $(".quiz__choice__B #link_B_5_5").click(function (){
+    //  cookieのセット
+    window.localStorage.setItem('store4',1);
+    alert(window.localStorage.getItem('store4'));
     $("#slide5_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya5);
   });
 /////////////////////////////////////////////////////////
@@ -468,18 +512,6 @@ $(function(){
     $.fn.fullpage.moveTo(1);
     location.reload("5000");
   });
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-
-
-
-
-/////////////////////////////////////////////////////////
-/////////////////////////////////////////////////////////
-/**********
-  ----------  ----------
-**********/
-
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 

@@ -168,6 +168,32 @@ html,body {
             height: auto;
         }
     }//  .soogo
+
+    .maguro_left {
+        position: absolute;
+        z-index: 4;
+        top: 3%;
+        left: -20%;
+        width: 12%;
+
+        &__image {
+            width: 100%;
+            height: auto;
+        }
+    }//  .maguro
+
+    .maguro_right {
+        position: absolute;
+        z-index: 4;
+        top: 3%;
+        right: -20%;
+        width: 12%;
+
+        &__image {
+            width: 100%;
+            height: auto;
+        }
+    }//  .maguro
 }//  .top_menu
 
 
