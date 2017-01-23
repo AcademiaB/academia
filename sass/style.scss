@@ -510,6 +510,20 @@ html,body {
     }
 }//  .shop_name
 
+.stone {
+    position: absolute;
+    z-index: 5;
+    top: auto;
+    right: 1%;
+    bottom: 5%;
+    left: auto;
+    text-align: center;
+
+    .image {
+        width: 70%;
+    }
+}
+
 
 
 

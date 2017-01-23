@@ -356,6 +356,17 @@ html, body {
       font-size: 3.5vw;
       float: left; }
 
+.stone {
+  position: absolute;
+  z-index: 5;
+  top: auto;
+  right: 1%;
+  bottom: 5%;
+  left: auto;
+  text-align: center; }
+  .stone .image {
+    width: 70%; }
+
 /**********
 どこにでも使えるクラス
 **********/
