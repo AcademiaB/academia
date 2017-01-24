@@ -21,9 +21,8 @@ $(function(){
           {duration: 4000}
         )
         .velocity(
-          /*{'top': "5%"},*/
-          {loop: true},
-          {duration: 10000}
+          {'top': "5%"},
+          {loop: true}
         );
     }
 
@@ -35,9 +34,8 @@ $(function(){
           {duration: 4000}
         )
         .velocity(
-          /*{'top': "5%"},*/
-          {loop: true},
-          {duration: 10000}
+          {'top': "5%"},
+          {loop: true}
         );
     }
   },1000);
