@@ -3,28 +3,42 @@ $(function(){
 
   setTimeout(function(){
     $('#menu_soogo')
-      .velocity({
-        'left': "5%"
-      },2000);
+      .velocity(
+        {'left': "5%"},
+        {duration: 2000}
+      );
     $('#menu_logo')
-      .velocity({
-        opacity: 1
-      },2000);
+      .velocity(
+        {opacity: 1},
+        {duration: 2000}
+      );
 
-    //  エンディング用の右マグロ(仮)
+    //  エンディング用の右くらげ(仮)
     if(window.localStorage.getItem('store1') == 1 & window.localStorage.getItem('store2') == 1 & window.localStorage.getItem('store3') == 1 & window.localStorage.getItem('store4') == 1){
-      $('#menu_maguro_right')
-        .velocity({
-          'right': "5%"
-        },4000);
+      $('#menu_kurage_right')
+        .velocity(
+          {'right': "5%"},
+          {duration: 4000}
+        )
+        .velocity(
+          /*{'top': "5%"},*/
+          {loop: true},
+          {duration: 10000}
+        );
     }
 
-    //  エンディング用の左マグロ(仮)
+    //  オープニング用の左くらげ(仮)
     if(window.localStorage.getItem('store1') == 0 || window.localStorage.getItem('store2') == 0 || window.localStorage.getItem('store3') == 0 || window.localStorage.getItem('store4') == 0){
-      $('#menu_maguro_left')
-        .velocity({
-          'left': "5%"
-        },4000);
+      $('#menu_kurage_left')
+        .velocity(
+          {'left': "5%"},
+          {duration: 4000}
+        )
+        .velocity(
+          /*{'top': "5%"},*/
+          {loop: true},
+          {duration: 10000}
+        );
     }
   },1000);
 
@@ -646,23 +660,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide2_4__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide2_4__movie__mp4").append('<video id="2_4_movie" class="video" controls><source src="../video/marubatu_movie01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide2_4__movie__gif .image").ready(function() {
+          $("#slide2_4__movie__mp4 .video").ready(function() {
+
+            var video = $("#2_4_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide2_4__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide2_4__movie__gif").fadeOut(1000);
+              $("#slide2_4__movie__mp4").fadeOut(1000);
               $("#slide2_4__soogo").fadeOut(1000);
               $("#slide2_4__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }
@@ -688,23 +705,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide2_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide2_6__movie__mp4").append('<video id="2_6_movie" class="video" controls><source src="../video/marubatu_movie01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide2_6__movie__gif .image").ready(function() {
+          $("#slide2_6__movie__mp4 .video").ready(function() {
+
+            var video = $("#2_6_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide2_6__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide2_6__movie__gif").fadeOut(1000);
+              $("#slide2_6__movie__mp4").fadeOut(1000);
               $("#slide2_6__soogo").fadeOut(1000);
               $("#slide2_6__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }

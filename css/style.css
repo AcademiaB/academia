@@ -116,22 +116,22 @@ html, body {
     .top_menu .soogo__image {
       width: 100%;
       height: auto; }
-  .top_menu .maguro_left {
+  .top_menu .kurage_left {
     position: absolute;
     z-index: 4;
     top: 3%;
     left: -20%;
     width: 12%; }
-    .top_menu .maguro_left__image {
+    .top_menu .kurage_left__image {
       width: 100%;
       height: auto; }
-  .top_menu .maguro_right {
+  .top_menu .kurage_right {
     position: absolute;
     z-index: 4;
     top: 3%;
     right: -20%;
     width: 12%; }
-    .top_menu .maguro_right__image {
+    .top_menu .kurage_right__image {
       width: 100%;
       height: auto; }
 
