@@ -41,13 +41,64 @@ $(function(){
   },1000);
 
   $("#menu_logo").click(function(){
-    alert("aaa")
+    //alert("aaa")
     //  localstorageに保存
     //  各店舗の最終問題をクリア(○か×)すると値を1にする
     for(var i=1; i<5; i++){
       window.localStorage.setItem('store'+i,1);
     }
   });
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+  /**********
+    ---------- OP/EDを再生 ----------
+  **********/
+  //  オープニング
+  //  gif画像のロード
+  $("#menu_kurage_left").click(function(){
+    $("#opening").css("display","none");
+    $("#opening").css("z-index","6");
+    $("#opening").fadeIn(2000);
+
+    setTimeout(function(){
+      $("#opening").append('<img class="image" src="../img/op.gif?' + (new Date).getTime() + '" alt="オープニングGIF">');
+    });
+
+    $("#opening .image").ready(function(){
+      setTimeout(function(){
+        $("#opening").fadeOut(2000);
+      },10000);
+      setTimeout(function(){
+        $("#opening").css("z-index","");
+      },12000);
+    });
+  });
+
+  //  エンディング
+  //  gif画像のロード
+  $("#menu_kurage_right").click(function(){
+    $("#ending").css("display","none");
+    $("#ending").css("z-index","6");
+    $("#ending").fadeIn(2000);
+
+
+    setTimeout(function(){
+      $("#ending").append('<img class="image" src="../img/ed.gif?' + (new Date).getTime() + '" alt="エンディングGIF">');
+    },2000);
+
+    $("#ending .image").ready(function(){
+      setTimeout(function(){
+        $("#ending").fadeOut(2000);
+      },10000);
+      setTimeout(function(){
+        $("#ending").css("z-index","");
+      },12000);
+    });
+  });
+/////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////
+
+
 
 
 
@@ -212,34 +263,34 @@ $(function(){
   $(".quiz__choice__A #link_A_2_5").click(function (){
     //  cookieのセット
     window.localStorage.setItem('store1',1);
-    alert(window.localStorage.getItem('store1'));
+    //alert(window.localStorage.getItem('store1'));
     $("#slide2_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide2_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei5);
   });
   $(".quiz__choice__B #link_B_2_5").click(function (){
   //  cookieのセット
     window.localStorage.setItem('store1',1);
-    alert(window.localStorage.getItem('store1'));
+    //alert(window.localStorage.getItem('store1'));
     $("#slide2_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_aisei5);
   });
 
 
   //  魚勝商店
-  //  1問目:○
+  //  1問目:×
   $(".quiz__choice__A #link_A_3_1").click(function (){
-    $("#slide3_2__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
   });
   $(".quiz__choice__B #link_B_3_1").click(function (){
+    $("#slide3_2__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide3_1 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu1);
   });
 
-  //  2問目:×
+  //  2問目:○
   $(".quiz__choice__A #link_A_3_3").click(function (){
+    $("#slide3_4__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide3_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu3);
   });
   $(".quiz__choice__B #link_B_3_3").click(function (){
-    $("#slide3_4__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide3_3 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu3);
   });
 
@@ -247,13 +298,13 @@ $(function(){
   $(".quiz__choice__A #link_A_3_5").click(function (){
     //  cookieのセット
     window.localStorage.setItem('store2',1);
-    alert(window.localStorage.getItem('store2'));
+    //alert(window.localStorage.getItem('store2'));
     $("#slide3_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu5);
   });
   $(".quiz__choice__B #link_B_3_5").click(function (){
     //  cookieのセット
     window.localStorage.setItem('store2',1);
-    alert(window.localStorage.getItem('store2'));
+    //alert(window.localStorage.getItem('store2'));
     $("#slide3_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide3_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_uokatu5);
   });
@@ -282,7 +333,7 @@ $(function(){
   $(".quiz__choice__A #link_A_4_5").click(function (){
     //  cookieのセット
     window.localStorage.setItem('store3',1);
-    alert(window.localStorage.getItem('store3'));
+    //alert(window.localStorage.getItem('store3'));
     $("#slide4_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide4_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_tuziki5);
   });
@@ -314,14 +365,14 @@ $(function(){
   $(".quiz__choice__A #link_A_5_5").click(function (){
     //  cookieのセット
     window.localStorage.setItem('store4',1);
-    alert(window.localStorage.getItem('store4'));
+    //alert(window.localStorage.getItem('store4'));
     $("#slide5_6__soogo .image").attr("src","../img/correct_sogo.png");
     $("#slide5_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya5);
   });
   $(".quiz__choice__B #link_B_5_5").click(function (){
     //  cookieのセット
     window.localStorage.setItem('store4',1);
-    alert(window.localStorage.getItem('store4'));
+    //alert(window.localStorage.getItem('store4'));
     $("#slide5_5 .fp-tableCell").fadeOut(1000,mySilentMoveTo_fuzitaya5);
   });
 /////////////////////////////////////////////////////////
@@ -613,7 +664,7 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide2_2__movie__mp4").append('<video id="2_2_movie" class="video" controls><source src="../video/marubatu_movie01.mp4"></video');
+          $("#slide2_2__movie__mp4").append('<video id="2_2_movie" class="video" controls><source src="../video/batu01.mp4"></video');
 
           //  gif画像が配置されたら開始
           $("#slide2_2__movie__mp4 .video").ready(function() {
@@ -658,7 +709,7 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide2_4__movie__mp4").append('<video id="2_4_movie" class="video" controls><source src="../video/marubatu_movie01.mp4"></video');
+          $("#slide2_4__movie__mp4").append('<video id="2_4_movie" class="video" controls><source src="../video/batu01.mp4"></video');
 
           //  gif画像が配置されたら開始
           $("#slide2_4__movie__mp4 .video").ready(function() {
@@ -703,7 +754,7 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide2_6__movie__mp4").append('<video id="2_6_movie" class="video" controls><source src="../video/marubatu_movie01.mp4"></video');
+          $("#slide2_6__movie__mp4").append('<video id="2_6_movie" class="video" controls><source src="../video/maru01.mp4"></video');
 
           //  gif画像が配置されたら開始
           $("#slide2_6__movie__mp4 .video").ready(function() {
@@ -753,23 +804,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide3_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide3_2__movie__mp4").append('<video id="3_2_movie" class="video" controls><source src="../video/batu01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide3_2__movie__gif .image").ready(function() {
+          $("#slide3_2__movie__mp4 .video").ready(function() {
+
+            var video = $("#3_2_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide3_2__soogo").fadeIn(1000);
-            },4000);
+            },14000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide3_2__movie__gif").fadeOut(1000);
+              $("#slide3_2__movie__mp4").fadeOut(1000);
               $("#slide3_2__soogo").fadeOut(1000);
               $("#slide3_2__answer").fadeIn(1000);
-            },8000);
+            },20000);
           });
         }
       }
@@ -795,23 +849,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide3_4__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide3_4__movie__mp4").append('<video id="3_4_movie" class="video" controls><source src="../video/maru01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide3_4__movie__gif .image").ready(function() {
+          $("#slide3_4__movie__mp4 .video").ready(function() {
+
+            var video = $("#3_4_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide3_4__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide3_4__movie__gif").fadeOut(1000);
+              $("#slide3_4__movie__mp4").fadeOut(1000);
               $("#slide3_4__soogo").fadeOut(1000);
               $("#slide3_4__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }
@@ -837,23 +894,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide3_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide3_6__movie__mp4").append('<video id="3_6_movie" class="video" controls><source src="../video/marubatu_movie01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide3_6__movie__gif .image").ready(function() {
+          $("#slide3_6_movie__mp4 .video").ready(function() {
+
+            var video = $("#3_6_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide3_6__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide3_6__movie__gif").fadeOut(1000);
+              $("#slide3_6__movie__mp4").fadeOut(1000);
               $("#slide3_6__soogo").fadeOut(1000);
               $("#slide3_6__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }
@@ -884,23 +944,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide4_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide4_2__movie__mp4").append('<video id="4_2_movie" class="video" controls><source src="../video/maru01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide4_2__movie__gif .image").ready(function() {
+          $("#slide4_2__movie__mp4 .video").ready(function() {
+
+            var video = $("#4_2_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide4_2__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide4_2__movie__gif").fadeOut(1000);
+              $("#slide4_2__movie__mp4").fadeOut(1000);
               $("#slide4_2__soogo").fadeOut(1000);
               $("#slide4_2__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }
@@ -926,23 +989,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide4_4__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide4_4__movie__mp4").append('<video id="4_4_movie" class="video" controls><source src="../video/batu01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide4_4__movie__gif .image").ready(function() {
+          $("#slide4_4__movie__mp4 .video").ready(function() {
+
+            var video = $("#4_4_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide4_4__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide4_4__movie__gif").fadeOut(1000);
+              $("#slide4_4__movie__mp4").fadeOut(1000);
               $("#slide4_4__soogo").fadeOut(1000);
               $("#slide4_4__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }
@@ -968,23 +1034,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide4_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide4_6__movie__mp4").append('<video id="4_6_movie" class="video" controls><source src="../video/maru01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide4_6__movie__gif .image").ready(function() {
+          $("#slide4_6__movie__mp4 .video").ready(function() {
+
+            var video = $("#4_6_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide4_6__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide4_6__movie__gif").fadeOut(1000);
+              $("#slide4_6__movie__mp4").fadeOut(1000);
               $("#slide4_6__soogo").fadeOut(1000);
               $("#slide4_6__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }
@@ -1015,23 +1084,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide5_2__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide5_2__movie__mp4").append('<video id="5_2_movie" class="video" controls><source src="../video/batu01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide5_2__movie__gif .image").ready(function() {
+          $("#slide5_2__movie__mp4 .video").ready(function() {
+
+            var video = $("#5_2_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide5_2__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide5_2__movie__gif").fadeOut(1000);
+              $("#slide5_2__movie__mp4").fadeOut(1000);
               $("#slide5_2__soogo").fadeOut(1000);
               $("#slide5_2__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }
@@ -1057,23 +1129,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide5_4__movie__gif").append('<img class=\"image\" src="../img/answer_effects2.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide5_4__movie__mp4").append('<video id="5_4_movie" class="video" controls><source src="../video/batu01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide5_4__movie__gif .image").ready(function() {
+          $("#slide5_4__movie__mp4 .video").ready(function() {
+
+            var video = $("#5_4_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide5_4__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide5_4__movie__gif").fadeOut(1000);
+              $("#slide5_4__movie__mp4").fadeOut(1000);
               $("#slide5_4__soogo").fadeOut(1000);
               $("#slide5_4__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }
@@ -1099,23 +1174,26 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide5_6__movie__gif").append('<img class=\"image\" src="../img/answer_effects.gif?' + (new Date).getTime() + '" alt=\"解答発表演出GIF\">');
+          $("#slide5_6__movie__mp4").append('<video id="5_6_movie" class="video" controls><source src="../video/maru01.mp4"></video');
 
           //  gif画像が配置されたら開始
-          $("#slide5_6__movie__gif .image").ready(function() {
+          $("#slide5_6__movie__mp4 .video").ready(function() {
+
+            var video = $("#5_6_movie").get(0);
+            video.play();
 
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide5_6__soogo").fadeIn(1000);
-            },4000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
             setTimeout(function(){
-              $("#slide5_6__movie__gif").fadeOut(1000);
+              $("#slide5_6__movie__mp4").fadeOut(1000);
               $("#slide5_6__soogo").fadeOut(1000);
               $("#slide5_6__answer").fadeIn(1000);
-            },8000);
+            },10000);
           });
         }
       }
