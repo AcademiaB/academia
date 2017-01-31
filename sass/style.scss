@@ -431,7 +431,7 @@ html,body {
                     }
                 }
 
-                .answer {
+                /*.answer {
                     position: absolute;
                     z-index: 4;
                     top: auto;
@@ -490,7 +490,56 @@ html,body {
                             }
                         }
                     }
-                }//  .answer
+                }//  .answer*/
+
+                .answer {
+                    position: absolute;
+                    z-index: 4;
+                    top: auto;
+                    right: 0;
+                    bottom: 20%;
+                    left: 0;
+                    width: 70%;
+                    height: 60%;
+                    margin: auto;
+                    padding: 2%;
+                    border: 10px solid $key_color2;
+                    box-sizing: border-box;
+                    border-radius: 20px;
+                    background-color: #e9f5ff;
+
+                    &__illust {
+                        position: relative;
+                        width: 40%;
+                        height: 100%;
+                        float: left;
+
+                        .image {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: auto;
+                            margin: auto;
+                        }
+                    }
+
+                    &__sentence {
+                        width: 60%;
+                        height: 100%;
+                        float: left;
+
+                        .word {
+                            padding: 8% 8%;
+                            line-height: 4vw;
+                            text-align: justify;
+                            word-wrap: break-word;
+                            font-size: 2.7vw;
+                        }
+                    }
+                }
 
                 .slide_position_bar {
                     position: absolute;
@@ -557,7 +606,7 @@ html,body {
 
 .stone {
     position: absolute;
-    z-index: 5;
+    z-index: 10;
     top: auto;
     right: 1%;
     bottom: 5%;

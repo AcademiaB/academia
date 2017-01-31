@@ -56,6 +56,7 @@ $(function(){
   //  オープニング
   //  gif画像のロード
   $("#menu_kurage_left").click(function(){
+    $("#ending").css("display","none");
     $("#opening").css("display","none");
     $("#opening").css("z-index","6");
     $("#opening").fadeIn(2000);
@@ -77,6 +78,7 @@ $(function(){
   //  エンディング
   //  gif画像のロード
   $("#menu_kurage_right").click(function(){
+    $("#opening").css("display","none");
     $("#ending").css("display","none");
     $("#ending").css("z-index","6");
     $("#ending").fadeIn(2000);
@@ -575,6 +577,41 @@ $(function(){
     $.fn.fullpage.moveTo(1);
     location.reload("5000");
   });
+
+  /**********
+    ----------次の問題へ----------
+  **********/
+  //  相生屋
+  $("#aisei1_to_2").click(function(){
+    mySilentMoveTo_aisei2();
+  });
+  $("#aisei2_to_3").click(function(){
+    mySilentMoveTo_aisei4();
+  });
+
+  //  魚勝商店
+  $("#uokatu1_to_2").click(function(){
+    mySilentMoveTo_uokatu2();
+  });
+  $("#uokatu2_to_3").click(function(){
+    mySilentMoveTo_uokatu4();
+  });
+
+  //  辻喜
+  $("#tuziki1_to_2").click(function(){
+    mySilentMoveTo_tuziki2();
+  });
+  $("#tuziki2_to_3").click(function(){
+    mySilentMoveTo_tuziki4();
+  });
+
+  //  藤田屋
+  $("#fuzitaya1_to_2").click(function(){
+    mySilentMoveTo_fuzitaya2();
+  });
+  $("#fuzitaya2_to_3").click(function(){
+    mySilentMoveTo_fuzitaya4();
+  });
 /////////////////////////////////////////////////////////
 /////////////////////////////////////////////////////////
 
@@ -675,7 +712,7 @@ function fullpage_load(){
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide2_2__soogo").fadeIn(1000);
-            },7000);
+            },16000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
@@ -683,7 +720,7 @@ function fullpage_load(){
               $("#slide2_2__movie__mp4").fadeOut(1000);
               $("#slide2_2__soogo").fadeOut(1000);
               $("#slide2_2__answer").fadeIn(1000);
-            },10000);
+            },20000);
           });
         }
       }
@@ -720,7 +757,7 @@ function fullpage_load(){
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide2_4__soogo").fadeIn(1000);
-            },7000);
+            },16000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
@@ -728,7 +765,7 @@ function fullpage_load(){
               $("#slide2_4__movie__mp4").fadeOut(1000);
               $("#slide2_4__soogo").fadeOut(1000);
               $("#slide2_4__answer").fadeIn(1000);
-            },10000);
+            },20000);
           });
         }
       }
@@ -765,7 +802,7 @@ function fullpage_load(){
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide2_6__soogo").fadeIn(1000);
-            },7000);
+            },17000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
@@ -773,7 +810,7 @@ function fullpage_load(){
               $("#slide2_6__movie__mp4").fadeOut(1000);
               $("#slide2_6__soogo").fadeOut(1000);
               $("#slide2_6__answer").fadeIn(1000);
-            },10000);
+            },21000);
           });
         }
       }
@@ -804,7 +841,7 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide3_2__movie__mp4").append('<video id="3_2_movie" class="video" controls><source src="../video/batu01.mp4"></video');
+          $("#slide3_2__movie__mp4").append('<video id="3_2_movie" class="video" controls><source src="../video/batu02.mp4"></video');
 
           //  gif画像が配置されたら開始
           $("#slide3_2__movie__mp4 .video").ready(function() {
@@ -815,7 +852,7 @@ function fullpage_load(){
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide3_2__soogo").fadeIn(1000);
-            },14000);
+            },7000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
@@ -823,7 +860,7 @@ function fullpage_load(){
               $("#slide3_2__movie__mp4").fadeOut(1000);
               $("#slide3_2__soogo").fadeOut(1000);
               $("#slide3_2__answer").fadeIn(1000);
-            },20000);
+            },11000);
           });
         }
       }
@@ -849,7 +886,7 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide3_4__movie__mp4").append('<video id="3_4_movie" class="video" controls><source src="../video/maru01.mp4"></video');
+          $("#slide3_4__movie__mp4").append('<video id="3_4_movie" class="video" controls><source src="../video/maru02.mp4"></video');
 
           //  gif画像が配置されたら開始
           $("#slide3_4__movie__mp4 .video").ready(function() {
@@ -860,7 +897,7 @@ function fullpage_load(){
             //  gif画像の再生が終了したら不正解のそーごちゃんをフェードイン
             setTimeout(function(){
               $("#slide3_4__soogo").fadeIn(1000);
-            },7000);
+            },11000);
 
             //  1500の部分をgif画像の長さに変更
             //  gif画像の再生が終了したらフェードアウト
@@ -868,7 +905,7 @@ function fullpage_load(){
               $("#slide3_4__movie__mp4").fadeOut(1000);
               $("#slide3_4__soogo").fadeOut(1000);
               $("#slide3_4__answer").fadeIn(1000);
-            },10000);
+            },15000);
           });
         }
       }
@@ -894,7 +931,7 @@ function fullpage_load(){
 
         //  gif画像のロード
         function gifLoad(){
-          $("#slide3_6__movie__mp4").append('<video id="3_6_movie" class="video" controls><source src="../video/marubatu_movie01.mp4"></video');
+          $("#slide3_6__movie__mp4").append('<video id="3_6_movie" class="video" controls><source src="../video/batu02.mp4"></video');
 
           //  gif画像が配置されたら開始
           $("#slide3_6_movie__mp4 .video").ready(function() {
@@ -913,7 +950,7 @@ function fullpage_load(){
               $("#slide3_6__movie__mp4").fadeOut(1000);
               $("#slide3_6__soogo").fadeOut(1000);
               $("#slide3_6__answer").fadeIn(1000);
-            },10000);
+            },11000);
           });
         }
       }
